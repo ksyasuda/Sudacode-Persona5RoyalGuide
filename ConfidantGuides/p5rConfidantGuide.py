@@ -1,5 +1,19 @@
 #!/usr/bin/env python3
 
+import os
+
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+
 def chooseConfidant(isVerbose):
     """Get input from user and return full name of confidant selected"""
     ## Mapper from first name or last name to full name
@@ -37,3 +51,77 @@ def chooseConfidant(isVerbose):
     if isVerbose:
         print(confidant, 'found in mapper... returning', mapper[temp])
     return mapper[temp]
+
+def findBestAnswer(parts):
+    scores = []
+    indicies = []
+    count = 0
+    for part in parts:
+        ## If a + is there a single digit follows guaranteed
+        if part[0] == '+':
+            scores.append(part[1])
+            indicies.append(count)
+        count += 1
+    maxVal = -99999
+    index = 0
+    count = 0
+    allSame = True
+    ## indicies will only be size 1 when all same value
+    for score in scores:
+        if int(score) > int(maxVal):
+            maxVal = int(score)
+            index = count
+        if count > 0 and scores[count] != scores[count - 1]:
+            allSame = False
+        count += 1
+
+    if allSame:
+        return 'Pick Any'
+
+    bestAnswer = ''
+    if index == 0: 
+        bestAnswer = parts[:indicies[index]+1]
+    else:
+        beginIndex = indicies[index-1] + 1
+        endIndex = indicies[index]
+        bestAnswer = parts[beginIndex:endIndex]
+        bestAnswer += parts[endIndex]
+        if bestAnswer[0][0:1] == '\t':
+            bestAnswer = bestAnswer[2:]
+    bestAnswer = ' '.join(bestAnswer)
+    return bestAnswer
+
+def printDialogueAnswers(confidant):
+    pathToScript = os.path.realpath(__file__)
+    filepath = pathToScript[0:pathToScript.rfind('/')]
+    filepath += '/KawakamiRomance.txt'
+    if confidant == 'Sadayo Kawakami':
+        with open(filepath) as f:
+            lines = f.readlines()
+            first = 0
+            for line in lines:
+                parts = line.split(' ')
+                if parts[0] == 'Rank':
+                    ## make the Rank # bold
+                    temp = f'{bcolors.BOLD}'
+                    temp += parts[0]
+                    parts[0] = temp
+                    temp = f'{bcolors.BOLD}'
+                    temp += parts[1]
+                    parts[1] = temp
+                    print(parts[0], parts[1])
+                elif parts[0] == 'Level':
+                    ## make entire Level # X required bold
+                    temp = f'{bcolors.BOLD}'
+                    for i in range(len(parts)):
+                        temp += ' ' + parts[i]
+                    print(temp)
+                    continue
+                elif parts[0] == '(ROMANCE)':
+                    temp = f'{bcolors.WARNING}'
+                    temp += parts[0]
+                    print(temp)
+                    continue
+                else:
+                    best = findBestAnswer(parts)
+                    print('Best Answer: ', best)
