@@ -50,7 +50,8 @@ Then the script can be executing by using the command `$ persona5-royal-guide`
 |---------------|-----------------------------------|
 | -h, --help	|	Bring up the help menu		    |
 | -v, --verbose	|	Toggle verbose output		    |
-| -c, --class	|	Get class/exam question answers |
+| -a, --answers	|	Get class/exam question answers |
+| -c, --confidants| Get info about confidants		|
 
 ### Attribution <a name='attribution'></a>
 - The classroom answers text was taken from the guide written by Ryan Gilliam on [Polygon](https://www.polygon.com/persona-5-royal-guide-walkthrough/2020/3/31/21192788/questions-answers-quizzes-exams-midterm-final-classroom) 
