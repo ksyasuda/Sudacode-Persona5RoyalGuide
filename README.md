@@ -55,3 +55,4 @@ Then the script can be executing by using the command `$ persona5-royal-guide`
 
 ### Attribution <a name='attribution'></a>
 - The classroom answers text was taken from the guide written by Ryan Gilliam on [Polygon](https://www.polygon.com/persona-5-royal-guide-walkthrough/2020/3/31/21192788/questions-answers-quizzes-exams-midterm-final-classroom) 
+- [Kawakami Guide](https://hardcoregamer.com/2020/03/31/persona-5-royal-confidant-guide-temperance-sadayo-kawakami/)
