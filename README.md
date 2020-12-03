@@ -17,6 +17,7 @@ help provide all the information that I need all in one place.
 ## Content
 * [Download](#download)
 * [Usage](#usage)
+* [Attribution](#attribution)
 
 ## Download <a name='download'></a>
 Run the following commands in your terminal to download the repository and
@@ -50,3 +51,6 @@ Then the script can be executing by using the command `$ persona5-royal-guide`
 | -h, --help	|	Bring up the help menu		    |
 | -v, --verbose	|	Toggle verbose output		    |
 | -c, --class	|	Get class/exam question answers |
+
+### Attribution <a name='attribution'></a>
+- The classroom answers text was taken from the guide written by Ryan Gilliam on [Polygon](https://www.polygon.com/persona-5-royal-guide-walkthrough/2020/3/31/21192788/questions-answers-quizzes-exams-midterm-final-classroom) 
