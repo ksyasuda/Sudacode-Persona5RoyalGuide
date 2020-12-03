@@ -5,7 +5,17 @@ import getopt
 from ClassroomAnswers import p5rClassroomQuestions
 from ConfidantGuides import p5rConfidantGuide
 
+def getConfidant(isVerbose):
+    """Gets the formatted name of the confidant that the user needs information about"""
+    if isVerbose:
+        print('Getting user input for confidant name...')
+    confidant = p5rConfidantGuide.chooseConfidant(isVerbose)
+    if isVerbose:
+        print('User input received...', confidant, 'chosen')
+    return confidant
+
 def printHelp():
+    """Prints the help menu for the script"""
     print('Sudacode Persona 5 Royal Guide Help Menu\n')
     print('Words of Advice:')
     print('When In Doubt, Factor Out - Mr. Kim\n')
@@ -20,6 +30,7 @@ def printHelp():
     print('-c, --confidants', '\tone required arg\t', 'Get info about the confidants')
 
 def main():
+    """The literal main"""
     days = {}
     argv = sys.argv
     argc = len(argv)
@@ -57,23 +68,22 @@ def main():
     if confidantFlag:
         if len(confidantArg) <= 0:
             print('No argument provided but 1 argument required...')
-            sys.exit(1)
+            exit(1)
         arg = confidantArg
-        if isVerbose:
-            print('Getting user input for confidant name...')
-        confidant = p5rConfidantGuide.chooseConfidant(isVerbose)
-        if isVerbose:
-            print('User input received...', confidant, 'chosen')
         if arg == 'all' or arg == 'a':
+            confidant = getConfidant(isVerbose)
             # printAllConfidantInfo()
             pass
         elif arg == 'dialogue' or arg == 'd':
-            printConfidantDialogueAns(confidant)
+            confidant = getConfidant(isVerbose)
+            p5rConfidantGuide.printDialogueAnswers(confidant)
             pass
         elif arg == 'hangout' or arg == 'h':
+            confidant = getConfidant(isVerbose)
             # printHangoutLocation(confidant)
             pass
         else:
+            print('options are: "dialogue", "hangout", and "all"')
             # printAllConfidantInfo()
             pass
 
