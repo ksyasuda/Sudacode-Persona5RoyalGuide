@@ -4,29 +4,40 @@ import getopt
 from p5rClassroomQuestions import *
 
 def printHelp():
-    print('Help')
-    print('When In Doubt, Factor Out - Mr. Kim')
+    print('Sudacode Persona 5 Royal Guide Help Menu\n')
+    print('Words of Advice:')
+    print('When In Doubt, Factor Out - Mr. Kim\n')
+    print('USAGE')
+    print('./persona5-royal-guide.py [args]')
+    print('OR')
+    print('python persona5-royal-guide.py [args]\n')
+    print('ARGUMENTS')
+    print('-h, --help', '\t\t', 'Bring up the help menu')
+    print('-v, --verbose', '\t\t', 'Enable verbose output')
+    print('-c, --class','\t\t', 'Get answers for in-game questions asked during class and exams')
 
 def main():
     days = {}
     argv = sys.argv
     argc = len(argv)
     isVerbose = False
-    # if argc > 1 and argv[1] == '-v':
-    #    isVerbose = True 
     options, remainder = getopt.gnu_getopt(argv[1:], 'hcv', ['help=',
                                                              'class=',
                                                              'verbose='])
-    # need to run through first time to check if verbose flag is set
     helpFlag = False
     classFlag  = False
-    for opt, arg in options:
-        if opt in ('-v', '--verbose'):
-            isVerbose = True
-        elif opt in ('-h', '--help'):
-            helpFlag = True 
-        elif opt in ('-c', '--class'):
-            classFlag = True
+    if len(options) > 0:
+        ## need to run through first time to check if verbose flag is set
+        for opt, arg in options:
+            if opt in ('-v', '--verbose'):
+                isVerbose = True
+            elif opt in ('-h', '--help'):
+                helpFlag = True 
+            elif opt in ('-c', '--class'):
+                classFlag = True
+    else:
+        printHelp()
+
     if helpFlag:
         printHelp()
         sys.exit(0)
