@@ -62,9 +62,9 @@ def main():
         printHelp()
         sys.exit(0)
     if ansFlag:
-        readQuestions(days, isVerbose)
-        chosenDate = getInput(isVerbose)
-        printData(days, chosenDate, isVerbose)
+        p5rClassroomQuestions.readQuestions(days, isVerbose)
+        chosenDate = p5rClassroomQuestions.getInput(isVerbose)
+        p5rClassroomQuestions.printData(days, chosenDate, isVerbose)
     if confidantFlag:
         if len(confidantArg) <= 0:
             print('No argument provided but 1 argument required...')
