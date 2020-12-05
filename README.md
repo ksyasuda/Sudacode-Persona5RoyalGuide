@@ -39,7 +39,7 @@ To run the script, use one of the following commands from within the directory:
 You can also pass the `-c` or `--confidant` flag the name of the confidant you
 want information about as an optional second argument to skip the confidant selection stage
 
-	$ ./persona5-royal-guide.py -c [dialogue | hangout | list | all] [confidant name]
+	$ ./persona5-royal-guide.py -c [dialogue|hangout|list|all] [confidant name/keyword] (optional)
 
 ### Copying the Script to the `bin` folder
 By copying, or creating a symlink in the `bin` folder, you can run the command
@@ -60,8 +60,8 @@ Then the script can be executing by using the command `$ persona5-royal-guide`
 
 	Extra Arg(s) Required:
 
-	-c, --confidants [dialogue | hangout | list | all]
+	-c, --confidants [dialogue|hangout|list|all] [confidant name/keyword] (optional)
 
 ### Attribution <a name='attribution'></a>
 - The classroom answers text was taken from the guide written by Ryan Gilliam on [Polygon](https://www.polygon.com/persona-5-royal-guide-walkthrough/2020/3/31/21192788/questions-answers-quizzes-exams-midterm-final-classroom) 
-- [Kawakami Guide](https://hardcoregamer.com/2020/03/31/persona-5-royal-confidant-guide-temperance-sadayo-kawakami/)
+- [Confidant Dialogue Guides](https://hardcoregamer.com/2020/03/31/persona-5-royal-confidant-guide/370507/)
