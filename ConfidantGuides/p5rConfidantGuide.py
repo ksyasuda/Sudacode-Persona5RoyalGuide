@@ -40,6 +40,12 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
+def isConfidant(name):
+    return name.strip().upper() in clist
+
+def normalizeName(name):
+    return mapper[name.strip().upper()]
+
 def listConfidants():
     clist.sort()
     print('------------------------------------------------------------------------------------------')
@@ -52,13 +58,6 @@ def listConfidants():
             print(name, end=' | ')
         i += 1
     print('\n------------------------------------------------------------------------------------------')
-
-def isConfidant(name):
-    return name.strip().upper() in clist
-
-def normalizeName(name):
-    return mapper[name.strip().upper()]
-
 
 def chooseConfidant(isVerbose):
     """Get input from user and return full name of confidant selected"""
@@ -116,11 +115,11 @@ def findBestAnswer(parts):
         bestAnswer = parts[beginIndex:endIndex]
         bestAnswer += parts[endIndex]
         ## shouldn't need this anymore
-        # if bestAnswer[0][0:1] == '\t':
-        #     bestAnswer = bestAnswer[2:]
-    if len(bestAnswer) > 2:
-        if bestAnswer[0] in ('Response', 'Followup'):
-            bestAnswer = bestAnswer[2:]
+
+    ## One last check to get rid of the lingering 'Response' or 'Followup' text at beginning of some lines
+    if len(bestAnswer) != 0 and bestAnswer[0] in ('Response', 'Followup'):
+        bestAnswer = bestAnswer[2:]
+
     ## best answer = an array containing each word in the answer
     bestAnswer = ' '.join(bestAnswer)
     return bestAnswer
