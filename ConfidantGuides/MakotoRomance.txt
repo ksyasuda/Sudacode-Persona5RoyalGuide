@@ -1,0 +1,56 @@
+Rank 1
+Level 3 Knowledge Required
+Followup Let’s go again sometime. +2 It’s a new you. +1 The red-light district next +3
+Rank 2
+Response 1 You’re very well informed. +2 Have you ever been here? +0 Stay close to me. +0
+Response 2 You should have known better. +2 That was dangerous. +3 You get flustered easily, huh? +0
+Response 3 Why is it called a salon? +0 What kind of place is that? +0 
+Followup Couldn’t agree more. +2 He just wouldn’t give up. +0 Let’s actually go in next time. +0
+Rank 3
+Response 1 You have the wrong idea. +2 So what if we were together? +0 It’s none of your business. +0
+Response 2 Don’t let it get to you. +2 You can change. +3 Beep boop. +0
+Followup Sounds like you two get along. +2 Buchimaru-kun? +0 Okay, calm down. +0
+Rank 4
+Response 1 That’s unlike you. +2 Is Thieves work distracting you? +0 I’m sure you did better than me. +0
+Response 2 Eiko? +0 …Who? +0 
+Response 3 Don’t you have goals? +0 What about college? +0 What do you mean? +0
+Response 4 Why do you use it? +3 That’s adorable. +2 You’re not very ladylike… +0
+Response 5 Do you still want to pursue it? +0 I like a woman in uniform. +2 It’s an amazing goal. +3
+Rank 5
+Response 1 Are you jealous of them? +0 That’s annoying. +2 He sounds suspicious. +3
+Response 2 I got this. +3 Why do I have to do it? +0 Only if I can take it seriously. +2
+Followup Fist! Of! Justice! +0 Report him to the police. +0 Try to reach out to her. +2
+Rank 6
+MAX Charm Required
+Response 1 We just started. +2 We’re fighting right now. +0 Love comes in many forms. +3
+Response 2 Don’t be so pushy. +0 Back off. +0 Here, have my number instead. +0
+Response 3 No, you’re being considerate. +0 You worry too much. +0 Probably a little. +0
+Followup Tell him you’re on a date. +2 You’re allowed to ignore him. +0 Fire the same thing back. +0
+Rank 7
+Response 1 Do you think he likes you? +0 Does Eiko know about this? +0 
+Response 2 Probably a little. +0 You watch too many soap operas. +0 He’s definitely suspicious. +0
+Response3 Who was their leader? +0 What gang was it? +0 
+Response 4 That’s a horrible story. +3 Was it tough without him?? +2 He was a noble man. +3
+Response 5 That’s admirable. +3 I’m sure he was happy. +3 
+Response 6 Do you have an answer? +2 You can figure that out now. +2 
+Response 7 I’m game if you are. +2 What are you going to say? +0 Refuse her, please. +2
+Followup Of course.. +2 I guess so. +0 It’s the role I always hoped for. +2
+Rank 8
+Response 1 He says that to all his girls. +2 That’s how he ropes you in. +2 I’m not sure. +0
+Response 2 Absolutely. +3 What are we going to do? +2 Eh, she deserves him. +2
+Rank 9
+Response 1 Get away from her! +3 Your fight’s with me. +3 I’m calling the cops. +3
+Response 2 We should get out of here. +2 Follow me. +2 
+Response 3 It looked like it hurt. +0 That was the right move. +2 You really smacked her. +0
+Response 4 I’m a regular here. +3 It’s a popular meeting spot. +3 Not as much as you. +2
+Response 5 You’ll find someone someday. +3 END I’ll be your study partner. +0 (ROMANCE) 
+Response 6 I do. +3 (ROMANCE) That’s not what I meant. +0 
+Followup I’d do anything for you. +2 Were you scared? +0 No big deal. +2
+Rank MAX
+(ROMANCE)
+Response 1 That’s incredible. +2 Your slap worked wonders. +0 I’m so relieved. +0
+Response 2 Are you stressing over exams? +2 Back to studying? +0 For your sister? +0
+Response 3 Police commissioner? +0 That sounds difficult. +2 Why did you choose that? +0
+Response 4 What an admirable goal. +3 That’s an amazing dream. +2 Your father would be proud.+3
+Response 5 Haha, yea. +0 It’s not funny at all. +0 Just be careful, OK? +2
+Response 6 What’s wrong? +0 Do you want to study? +0 

@@ -1,63 +1,63 @@
 Rank 1
 Level 3 Guts Required
-Followup 	Yeah, I get it. +3 	I will if you will. +2 	Please stop talking like that. +2
+Followup Yeah, I get it. +3 I will if you will. +2 Please stop talking like that. +2
 Rank 2
-Response 1 	It does. +2 	I feel nothing. +0 	I’ll tell your boss. +0
-Response 2 	I can’t say I wasn’t… +0 	Absolutely not! +2 	What kind of weird things? +0
-Response 3 	You need money? +0 	What’s it for? +0 	
-Response 4 	Are you scolding me? +0 	This is all for you. +0 	I requested you. +0
-Followup 	You have the wrong number +0 	Uh, what the hell? +0 	Is this the hard sell? +2
+Response 1 It does. +2 I feel nothing. +0 I’ll tell your boss. +0
+Response 2 I can’t say I wasn’t… +0 Absolutely not! +2 What kind of weird things? +0
+Response 3 You need money? +0 What’s it for? +0 
+Response 4 Are you scolding me? +0 This is all for you. +0 I requested you. +0
+Followup You have the wrong number +0 Uh, what the hell? +0 Is this the hard sell? +2
 Rank 3
-Response 1 	Yeah, they do. +2 	Do some real cooking. +2 	Can I have a different maid. +0
-Response 2 	I was curious. +0 	So I could slack off in class. +0 	I wanted to see you. +0
-Response 3 	Your sister’s bills, right? +0 	I’ll request you more often. +3 	You’re really blunt. +0
-Response 4 	You have it rough. +0 	Are they expensive? +0 	Don’t overdo it. +0
-Followup 	Thanks. +2 	I’ll work hard at it. +0 	You’re not in character. +0
+Response 1 Yeah, they do. +2 Do some real cooking. +2 Can I have a different maid. +0
+Response 2 I was curious. +0 So I could slack off in class. +0 I wanted to see you. +0
+Response 3 Your sister’s bills, right? +0 I’ll request you more often. +3 You’re really blunt. +0
+Response 4 You have it rough. +0 Are they expensive? +0 Don’t overdo it. +0
+Followup Thanks. +2 I’ll work hard at it. +0 You’re not in character. +0
 Rank 4
-Response 1 	That would be great. +0 	What are you scheming? +0 	
-Response 2 	How rude. +2 	No surprise there. +0 	How old ARE you? +0
-Response 3 	Yes, you do. +2 	You’re pushing it. +0 	You need to love yourself. +3
-Response 4 	I already knew that. +0 	Why did you lie to me? +0 	You’re a bad teacher. +0
+Response 1 That would be great. +0 What are you scheming? +0 
+Response 2 How rude. +2 No surprise there. +0 How old ARE you? +0
+Response 3 Yes, you do. +2 You’re pushing it. +0 You need to love yourself. +3
+Response 4 I already knew that. +0 Why did you lie to me? +0 You’re a bad teacher. +0
 Rank 5
-Response 1 	It’s fun. +2 	I want to know more. +0 	Who’s the Master here? +2
-Response 2 	How Terrible… +2 	It was inevitable. +0 	So, did you stop? +2
-Response 3 	It’s not your fault. +0 	It was bad luck. +0 	It’s no one’s fault. +0
-Response 4 	You OK with that? +0 	Guardians, huh… +0 	
-Response 5 	It’s too late now. +0 	What about our deal? +0 	I want see you again. +0
-Followup 	Curry is all I eat. +0 	You get bored of the taste. +0 	You want some? +2
+Response 1 It’s fun. +2 I want to know more. +0 Who’s the Master here? +2
+Response 2 How Terrible… +2 It was inevitable. +0 So, did you stop? +2
+Response 3 It’s not your fault. +0 It was bad luck. +0 It’s no one’s fault. +0
+Response 4 You OK with that? +0 Guardians, huh… +0 
+Response 5 It’s too late now. +0 What about our deal? +0 I want see you again. +0
+Followup Curry is all I eat. +0 You get bored of the taste. +0 You want some? +2
 Rank 6
-Response 1 	You just got here. +0 	Want to rest a bit? +2 	Give me back my money. +0
-Response 2 	Are you all right? +3 	Have you see a doctor? +2 	You should go home. +3
-Response 3 	Are you OK? +0 	Don’t overdo it. +0 	
-Followup 	I’ll be fine. +0 	Nah, too lazy. +0 	How are you feeling, though? +2
+Response 1 You just got here. +0 Want to rest a bit? +2 Give me back my money. +0
+Response 2 Are you all right? +3 Have you see a doctor? +2 You should go home. +3
+Response 3 Are you OK? +0 Don’t overdo it. +0 
+Followup I’ll be fine. +0 Nah, too lazy. +0 How are you feeling, though? +2
 Rank 7
-Response 1 	Don’t strain yourself. +2 	Don’t lie. +0 	Don’t pay them. +3
-Response 2 	Sister company? +0 	Can you make a lot there? +0 	Think this through more. +3
-Response 3 	That’s the wrong choice. +0 	Isn’t there another way? +0 	Just rest for now. +0
+Response 1 Don’t strain yourself. +2 Don’t lie. +0 Don’t pay them. +3
+Response 2 Sister company? +0 Can you make a lot there? +0 Think this through more. +3
+Response 3 That’s the wrong choice. +0 Isn’t there another way? +0 Just rest for now. +0
 Rank 8
-Response 1 	That’s the wrong decision. +0 	Please reconsider. +0 	Is this really what you want? +3
-Response 2 	You’re running away. +2 	If that’s what you decided. +3 	I need my teacher. +0
-Response 3 	Try to remember +0 	That’s your answer. +0 	Take a look at yourself. +0
-Response 4 	Are you going to give up? +0 	Mistakes can be fixed. +0 	
-Response 5 	Be confident in your answer. +3 	That’s the right choice. +3 	You’re asking a student? +3
-Response 6 	I want to protect you. +3 	That’s reassuring. +3 	
-Followup 	You’re welcome. +2 	So much for being a maid. +2 	I’ll do anything for you. +2
+Response 1 That’s the wrong decision. +0 Please reconsider. +0 Is this really what you want? +3
+Response 2 You’re running away. +2 If that’s what you decided. +3 I need my teacher. +0
+Response 3 Try to remember +0 That’s your answer. +0 Take a look at yourself. +0
+Response 4 Are you going to give up? +0 Mistakes can be fixed. +0 
+Response 5 Be confident in your answer. +3 That’s the right choice. +3 You’re asking a student? +3
+Response 6 I want to protect you. +3 That’s reassuring. +3 
+Followup You’re welcome. +2 So much for being a maid. +2 I’ll do anything for you. +2
 Rank 8.5
-Response 1 	We’re talking here. +0 	You know it, lady. +0
-Response 2 	You can’t give up. +0 	But you were so determined. +0
-Response 3 	What are their names again? +0 	I need their names. +0
+Response 1 We’re talking here. +0 You know it, lady. +0
+Response 2 You can’t give up. +0 But you were so determined. +0
+Response 3 What are their names again? +0 I need their names. +0
 Rank 9
-Response 1 	Nonsense. +3 	You may be right. +0 	Aren’t you old already…? +0
-Response 2 	What a bummer. +3 	Thank you for your service. +3 	
-Response 3 	Not really. +2 END 	I want to keep seeing you. +2 (ROMANCE) 	
-Response 4 	Got it. +2 END 	I mean what I say. +0 (ROMANCE) 	
-Response 5 	I’m a master; you’re a maid. +0 	I’m a man; you’re a woman. +0 (ROMANCE) 	
+Response 1 Nonsense. +3 You may be right. +0 Aren’t you old already…? +0
+Response 2 What a bummer. +3 Thank you for your service. +3 
+Response 3 Not really. +2 END I want to keep seeing you. +2 (ROMANCE) 
+Response 4 Got it. +2 END I mean what I say. +0 (ROMANCE) 
+Response 5 I’m a master; you’re a maid. +0 I’m a man; you’re a woman. +0 (ROMANCE) 
 Rank MAX
 (ROMANCE)
-Response 1 	…Really? +0 	I see. +0 	That’s too bad… +0
-Response 2 	It doesn’t matter. +0 	That’s the best part. +0 	
-Response 3 	We won’t get caught. +0 	Don’t worry about it. +0 	You’re so responsible. +0
-Response 4 	What are you talking about? +0 	When did you realize? +0 	
-Response 5 	You got me. +0 	You have no proof. +0 	…So what if I am? +0
-Response 6 	That sounds promising. +3 	I’ll make sure of it. +3 	
-Response 7 	I want to rely on you. +3 	I want you to rely on me. +3 	
+Response 1 …Really? +0 I see. +0 That’s too bad… +0
+Response 2 It doesn’t matter. +0 That’s the best part. +0 
+Response 3 We won’t get caught. +0 Don’t worry about it. +0 You’re so responsible. +0
+Response 4 What are you talking about? +0 When did you realize? +0 
+Response 5 You got me. +0 You have no proof. +0 …So what if I am? +0
+Response 6 That sounds promising. +3 I’ll make sure of it. +3 
+Response 7 I want to rely on you. +3 I want you to rely on me. +3 

@@ -85,13 +85,16 @@ def findBestAnswer(parts):
         ## if best option is the left most option
         bestAnswer = parts[:indicies[index]+1]
     else:
-        beginIndex = indicies[index-1]
+        idx = indicies[index-1]
+        if index != len(parts) - 1:
+            idx += 1
+        beginIndex = idx
         endIndex = indicies[index]
         bestAnswer = parts[beginIndex:endIndex]
         bestAnswer += parts[endIndex]
-        ## get rid of possible leading tab
-        if bestAnswer[0][0:1] == '\t':
-            bestAnswer = bestAnswer[2:]
+        ## shouldn't need this anymore
+        # if bestAnswer[0][0:1] == '\t':
+        #     bestAnswer = bestAnswer[2:]
     ## best answer = an array containing each word in the answer
     bestAnswer = ' '.join(bestAnswer)
     return bestAnswer
@@ -99,37 +102,39 @@ def findBestAnswer(parts):
 def printDialogueAnswers(confidant):
     pathToScript = os.path.realpath(__file__)
     filepath = pathToScript[0:pathToScript.rfind('/')]
-    filepath += '/KawakamiRomance.txt'
     if confidant == 'Sadayo Kawakami':
-        with open(filepath) as f:
-            lines = f.readlines()
-            first = 0
-            for line in lines:
-                ## get rid of unwanted blank lines
-                if len(line) == 0 or line == '\n':
-                    continue
-                parts = line.split(' ')
-                if parts[0] == 'Rank':
-                    ## make the Rank # bold
-                    temp = f'\n{bcolors.BOLD}'
-                    temp += parts[0]
-                    parts[0] = temp
-                    temp = f'{bcolors.BOLD}'
-                    temp += parts[1]
-                    parts[1] = temp
-                    print(parts[0], parts[1])
-                elif parts[0] == 'Level':
-                    ## make entire Level # X required bold
-                    temp = f'{bcolors.BOLD}'
-                    for i in range(len(parts)):
-                        temp += ' ' + parts[i]
-                    print(temp)
-                    continue
-                elif parts[0] == '(ROMANCE)':
-                    temp = f'{bcolors.WARNING}'
-                    temp += parts[0]
-                    print(temp)
-                    continue
-                else:
-                    best = findBestAnswer(parts)
-                    print(f'{bcolors.ENDC}Best Answer: ', best)
+        filepath += '/KawakamiRomance.txt'
+    elif confidant == 'Makoto Nijima':
+        filepath += '/MakotoRomance.txt'
+    with open(filepath) as f:
+        lines = f.readlines()
+        first = 0
+        for line in lines:
+            ## get rid of unwanted blank lines
+            if len(line) == 0 or line == '\n':
+                continue
+            parts = line.split(' ')
+            if parts[0] == 'Rank':
+                ## make the Rank # bold
+                temp = f'\n{bcolors.BOLD}'
+                temp += parts[0]
+                parts[0] = temp
+                temp = f'{bcolors.BOLD}'
+                temp += parts[1]
+                parts[1] = temp
+                print(parts[0], parts[1])
+            elif parts[0] == 'Level' or parts[0] == 'MAX':
+                ## make entire Level # X required bold
+                temp = f'{bcolors.BOLD}'
+                for i in range(len(parts)):
+                    temp += ' ' + parts[i]
+                print(temp)
+                continue
+            elif parts[0] == '(ROMANCE)':
+                temp = f'{bcolors.WARNING}'
+                temp += parts[0]
+                print(temp)
+                continue
+            else:
+                best = findBestAnswer(parts)
+                print(f'{bcolors.ENDC}Best Answer: ', best)
