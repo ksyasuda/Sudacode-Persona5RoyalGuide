@@ -1,0 +1,55 @@
+Rank 1
+Followup Fine by me. +1 Please go easy on me. +3 So many pretty lights… +1
+Rank 2
+Level 2 Courage Required
+Response 1 I have a bad heart. +2 We’re on a date. +0 I know my rights. +0
+Response 2 I agree. +2 Harassment? +0 The Plague? +0
+Followup I’m totally fine. +2 I feel lightheaded +0 I think I have superpowers +2
+Rank 3
+Response 1 What was that about? +0 Was that an emergency? +0 
+Response 2 A medical error? +0 What do you mean? +0 
+Response 3 I don’t mind. +2 Is it true? +0 I need the medicine. +2
+Followup Of course not. +2 I don’t think I did… +0 Have you? +0
+Rank 4
+Response 1 You’ll be OK. +0 Dr. Takemi will help. +2 
+Response 2 You seem happy. +3 You’re so kind. +2 Why free? +2
+Followup I’ll reflect on my mistakes +2 But she ended up okay. +0 Punish me more. +0
+Rank 5
+Response 1 They trust you. +0 Was it really your fault? +0 
+Response 2 I had no idea. +0 It’s not too late. +0 
+Response 3 That’s good. +3 When will it be done? +2 … “Probably”? +0
+Followup About Miwa-chan? +2 About Oyamada? +0 About Crawford-Ende’s? +0
+Rank 6
+Response 1 Well, someone’s popular. +0 You seem annoyed. +0 Did something happen? +0
+Response 2 Having fun? +0 You ARE a genius. +0 
+Response 3 You’re a masochist. +0 It suits you. +3 You’re not honest. +2
+Followup You can count on me. +2 I think I’m at my limit… +0 Anything for you. +2
+Rank 7
+Response 1 This is harassment. +2 She’s a great doctor. +2 Please be quiet. +2
+Response 2 Don’t lose hope. +0 Let’s ask for details. +0 …… +0
+Response 3 Just rest for today. +2 Anything I can do? +2 Let’s retaliate. +0
+Response 4 It was inevitable. +0 We all do sometimes. +3 I’m glad you did. +2
+Rank 7.5
+Level 4 Charm Required
+Response 1 What about Miwa-chan? +0 You OK with this? +0 
+Response 2 Don’t give up. +0 Anything you can do? +0 I’m your ally. +2
+Response 3 You gonna run away? +0 And your patients? +0 
+Response 4 What’s his full name? +0 Tell me about him. +0 
+Response 5 I won’t do anything. +0 It’s for my research. +0 
+Rank 8
+Response 1 Miwa-chan is alive. +0 Oyamada lied to you. +0 
+Response 2 You should hurry. +2 Let’s get to work, doctor. +3 It’s not over yet. +3
+Response 3 It’s for Miwa-chan +3 It’s for my exams. +2 It’s for you. +3
+Followup I’ll be cheering you on. +2 Don’t burn yourself out. +0 Anything else I can do. +2
+Rank 9
+Response 1 Don’t worry about it. +2 It was for my exams. +2 It was rough. +3
+Response 2 That’s troubling. +0 And your patients? +0 
+Response 3 I wanted to see you. +0 (ROMANCE) It was for my exams. +0 END 
+Response 4 I love you. +2 (ROMANCE) What do you think? +0 END 
+Response 5 It isn’t a joke. +3 (ROMANCE) That sounds good. +0 
+Followup It’s true love. +0 So did you. +2 I’ve always loved you. +0
+Rank MAX
+(ROMANCE)
+Response 1 Uh, what? +0 Is that a joke? +0 
+Response 2 It’s a coincidence. +0 I wonder… +2 So what if it’s true? +0
+Response 3 What kind? +2 Yes, please. +3 

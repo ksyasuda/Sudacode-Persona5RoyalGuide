@@ -36,7 +36,8 @@ def chooseConfidant(isVerbose):
               'Iwai Munehisa', 'TAE TAKEMI': 'Tae Takemi', 'SADAYO KAWAKAMI':
               'Sadayo Kawakami', 'ICHIKO OHYA': 'Ichiko Ohya', 'SHINYA ODA':
               'Shinya Oda', 'KASUMI': 'Kasumi Yoshizawa', 'YOSHIZAWA': 'Kasumi\
-              Yoshizawa', 'KASUMI YOSHIZAWA': 'Kasumi Yoshizawa'}
+              Yoshizawa', 'KASUMI YOSHIZAWA': 'Kasumi Yoshizawa', 'HIFUMI':
+              'Hifumi Togo', 'TOGO': 'Hifumi Togo', 'HIFUMI TOGO': 'Hifumi Togo'}
     ## List of available names for input
     clist = ['KAWAKAMI', 'MORGANA', 'MAKOTO', 'HARU', 'YUSUKE', 'SOJIRO', 'ANN', 'RYUJI', 'GORO', 'FUTABA', 'CHIHAYA', 'TWINS', 'IWAI', 'TAE', 'SADAYO', 'ICHOKO', 'HIFUMI', 'YUUKI', 'TORANOSUKE', 'SAE', 'KASUMI', 'TAKUTO', 'MARUKI', 'TAKUTO MARUKI', 'YOSHIZAWA', 'KASUMI YOSHIZAWA', 'SAE NIJIMA', 'YOSHIDA', 'TORANOSUKE YOSHIDA', 'MISHIMA', 'YUUKI MISHIMA', 'TOGO', 'HIFUMI TOGO', 'SHINYA ODA', 'ODA', 'SHINYA', 'OHYA', 'ICHIKO OHYA', 'TAKEMI', 'TAE TAKEMI', 'MUNEHISA', 'IWAI MUNEHISA', 'MIFUNE', 'CHIHAYA MIFUNE', 'FUTABA SAKURA', 'AKECHI', 'GORO AKECHI', 'SAKAMOTO', 'RYUJI SAKAMOTO', 'TAKAMAKI', 'ANN TAKAMAKI', 'SOJIRO SAKURA', 'KITAGAWA', 'YUSUKE KITAGAWA', 'OKUMURA', 'HARU OKUMURA', 'MAKOTO NIJIMA']
 
@@ -103,12 +104,19 @@ def findBestAnswer(parts):
 def printDialogueAnswers(confidant):
     pathToScript = os.path.realpath(__file__)
     filepath = pathToScript[0:pathToScript.rfind('/')]
+    filepath += '/dialogues'
     if confidant == 'Sadayo Kawakami':
         filepath += '/KawakamiRomance.txt'
     elif confidant == 'Makoto Nijima':
         filepath += '/MakotoRomance.txt'
     elif confidant == 'Kasumi Yoshizawa':
         filepath += '/KasumiRomance.txt'
+    elif confidant == 'Hifumi Togo':
+        filepath += '/HifumiRomance.txt'
+    elif confidant == 'Tae Takemi':
+        filepath += '/TakemiRomance.txt'
+    elif confidant == 'Chihaya Mifune':
+        filepath += '/ChihayaRomance.txt'
     with open(filepath) as f:
         lines = f.readlines()
         first = 0

@@ -1,0 +1,49 @@
+Rank 1
+Level 3 Charm Required
+Followup Sure. +1 I guess we can. +1 Lucky me. +2
+Rank 2
+Response 1 That’s interesting. +2 I like that attitude change. +0 It’s a bit scary. +0
+Response 2 Have confidence in yourself. +0 Don’t worry about them. +0 
+Response 3 When is it coming out? +0 You’re, like, an idol. +0 But you don’t want to, right? +2
+Rank 3
+Response 1 Describes you perfectly. +2 No, I didn’t. +0 That’s quite the headline. +0
+Response 2 You don’t enjoy it? +0 Having a difficult time? +2 You should just decline. +0
+Followup Bring it on. +2 Don’t worry about it. +0 This is part of our deal too. +0
+Rank 4
+Response 1 I don’t mind. +2 She has a bad vibe. +0 Must’ve been the katsu curry. +2
+Response 2 They’re ridiculous. +0 They’re cool. +2 Never heard of them. +0
+Followup I’d love to. +2 If our schedules match up. +0 Where shall we go next? +2
+Rank 5
+Response 1 You’re not allowed to date? +0 She’s scary. +2 Accomplish things? +0
+Response 2 You don’t like the attention? +0 You should stop then. +2 Have you told your mother? +0
+Followup No worries. +0 You’ve got a lot to deal with… +2 Why do you have to apologize? +0
+Rank 6
+Response 1 You’ll be famous. +0 Is that frustrating? +2 The media is scary. +0
+Response 2 Do you still like shogi? +2 Is that what you want to do? +0 Do what you love. +2
+Followup You think so? +0 You’re imagining things. +2 Confess your sins, my child. +0
+Rank 7
+Response 1 That’s almost a relief. +2 Don’t let your guard down. +0 It may come down to luck. +3
+Response 2 Give it your all. +2 I believe in you. +3 Idols are cool too. +0
+Rank 7.5
+MAX Knowledge Required
+Response 1 What do you mean? +0 I don’t understand. +0 
+Response 2 That won’t work. +2 That’s a great strategy. +0 Do you intend to lose? +0
+Response 3 Let’s make her reconsider. +0 Let’s do something about it. +0 
+Response 4 What’s your mother’s name? +0 Tell me her name. +0 
+Rank 8
+Response 1 Maybe… +2 You’re overthinking it. +0 I’m glad her heart changed. +3
+Response 2 Lose what? +0 What’re you talking about? +0 
+Followup I support it. +2 You should really rethink this. +0 It’s certainly admirable. +0
+Rank 9
+Response 1 Give it all you go. +2 Do you feel confident? +0 You can do it. +0
+Response 2 It was a good effort. +0 You’ll win next time. +0 A very queenly decision. +3
+Response 3 I want to become stronger. +0 END I want to stay by your side. +0 (ROMANCE) 
+Response 4 I want us to date. +0 (ROMANCE) We’ll be friends forever. +0 
+Followup Anything for you. +2 It was all a big coincidence. +2 It was love at first sight. +2
+Rank MAX
+(ROMANCE)
+Response 1 That’s rough. +2 You’ll triumph in the end. +3 Just don’t lose. +3
+Response 2 You can do it. +0 That’s reassuring. +0 
+Response 3 So you know. +0 What do you mean? +0 We do. +0
+Response 4 Thank you. +0 That’s reassuring. +0 
+Response 5 What’s wrong? +0 Are you nervous? +0
