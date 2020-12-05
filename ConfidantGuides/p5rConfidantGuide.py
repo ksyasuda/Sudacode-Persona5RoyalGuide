@@ -35,7 +35,8 @@ def chooseConfidant(isVerbose):
               Sakura', 'CHIHAYA MIFUNE': 'Chihaya Mifune', 'IWAI MUNEHISA':
               'Iwai Munehisa', 'TAE TAKEMI': 'Tae Takemi', 'SADAYO KAWAKAMI':
               'Sadayo Kawakami', 'ICHIKO OHYA': 'Ichiko Ohya', 'SHINYA ODA':
-              'Shinya Oda'}
+              'Shinya Oda', 'KASUMI': 'Kasumi Yoshizawa', 'YOSHIZAWA': 'Kasumi\
+              Yoshizawa', 'KASUMI YOSHIZAWA': 'Kasumi Yoshizawa'}
     ## List of available names for input
     clist = ['KAWAKAMI', 'MORGANA', 'MAKOTO', 'HARU', 'YUSUKE', 'SOJIRO', 'ANN', 'RYUJI', 'GORO', 'FUTABA', 'CHIHAYA', 'TWINS', 'IWAI', 'TAE', 'SADAYO', 'ICHOKO', 'HIFUMI', 'YUUKI', 'TORANOSUKE', 'SAE', 'KASUMI', 'TAKUTO', 'MARUKI', 'TAKUTO MARUKI', 'YOSHIZAWA', 'KASUMI YOSHIZAWA', 'SAE NIJIMA', 'YOSHIDA', 'TORANOSUKE YOSHIDA', 'MISHIMA', 'YUUKI MISHIMA', 'TOGO', 'HIFUMI TOGO', 'SHINYA ODA', 'ODA', 'SHINYA', 'OHYA', 'ICHIKO OHYA', 'TAKEMI', 'TAE TAKEMI', 'MUNEHISA', 'IWAI MUNEHISA', 'MIFUNE', 'CHIHAYA MIFUNE', 'FUTABA SAKURA', 'AKECHI', 'GORO AKECHI', 'SAKAMOTO', 'RYUJI SAKAMOTO', 'TAKAMAKI', 'ANN TAKAMAKI', 'SOJIRO SAKURA', 'KITAGAWA', 'YUSUKE KITAGAWA', 'OKUMURA', 'HARU OKUMURA', 'MAKOTO NIJIMA']
 
@@ -106,6 +107,8 @@ def printDialogueAnswers(confidant):
         filepath += '/KawakamiRomance.txt'
     elif confidant == 'Makoto Nijima':
         filepath += '/MakotoRomance.txt'
+    elif confidant == 'Kasumi Yoshizawa':
+        filepath += '/KasumiRomance.txt'
     with open(filepath) as f:
         lines = f.readlines()
         first = 0

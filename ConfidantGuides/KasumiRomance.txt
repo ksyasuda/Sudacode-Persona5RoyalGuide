@@ -1,0 +1,89 @@
+Rank 2
+Response 1 We’re just getting started. +2 Go easy on me. +0 I’m so done with this. +2 
+Response 2 Next time, then. +2 You doing okay? +0 Lucky for me… +0
+Response 3 I see. +0 So now…? +0 
+Response 4 No problem. +0 You sure? +0 Uh, romantically? +0
+Response 5 Leave it to me. +0 Let’s give it a try. +0 Then follow my lead. +0
+Followup Impressive. +2 Gotta push through it. +0 You did eat eventually, right? +0
+Rank 3
+Response 1 Making bento? +3 Potluck parties? +0 “This” being…? +0
+Response 2 I’m touched! +2 It looks delicious. +2 Let’s see if it’s good… +0
+Response 3 Is that all for you? +3 That seems a little much. +2 What IS that? +0
+Response 4 This tastes like… +0 It’s definitely unique. +2 It’s… greeeaaat… +0
+Response 5 Not exactly. +0 Is there a third option…? +0 
+Response 6 Calm down. +0 You’re going to get it now? +0 
+Response 7 This works fine as is. +0 I’m enjoying this. +0 Let’s just eat. +0
+Response 8 You could try again sometime? +3 It happens. +3 Just keep at it. +3
+Response 9 That sounds right. +0 Maybe… +0 
+Rank 4
+Response 1 You have bad eyesight? +0 You’re looking to buy? +2 I have enough glasses. +0
+Response 2 A pretty modern look. +3 Not my style. +0 I look so aloof in these. +2
+Response 3 Do they suit your dad, though? =0 I’m not so sure… +0 
+Response 4 Of course. +2 Let’s keep going. +2 Sure, whatever. +0
+Response 5 Trust your instincts. +0 Don’t overthink it. +0 
+Response 6 Good choice. +2 I’m sure he’ll love it. +0 
+Response 7 It’s part of our deal. +0 Not a problem at all. +0 I expect compensation. +0
+Response 8 Everyone deals with that. +2 That’s your slump talking. +0 
+Response 9 Good luck. +0 We’ll work at it together. +2 No rush, though. +0
+Followup I’m glad to hear that. +2 You should be more confident. +2 Of course he is. +0
+Rank 5
+Response 1 It’s a surprise, yea. +2 Not at all. +0 What are you scheming? +0
+Response 2 This seems kind of sudden. +0 If I’m just watching… +0 
+Response 3 It’s a good idea. +2 Go ahead. I’ll watch. +3 Maybe stick to gymnastics. +0
+Response 4 Don’t give up. +0 Just don’t lose hope. +0 You can beat this, right? +0
+Response 5 Congratulations. +3 I saw! +3 How’s that feel? +2
+Response 6 That’s important. +3 Don’t forget how that feels. +2 
+Response 7 Nicely done. +0 It’s not over yet. +0 
+Followup Swimming. +3 Running. +2 Gymnastics. +3
+Rank 6
+Requires Moving Towards the True Ending
+Response 1 It wasn’t on purpose. +0 What could you have done? +0 At least you realize it now. +0
+Response 2 Don’t beat yourself up. +0 What’ll you do now? +0 Calm down. +0
+Response 3 You two were close, then. +0 Those must be good memories. +0 All for ice cream, huh? +0
+Response 4 … That IS genius. +0 How old was she again? +0 
+Response 5 She cared about you. +0 Sounds like tough training. +0 
+Response 6 Why? +0 I can imagine. +0 
+Response 7 It must have been hard. +0 What about Kasumi’s feelings? +0 Sounds like running away. +0
+Response 8 You have to accept it. +0 Try not to think about it. +0 So what happens now? +0
+Response 9 I will. +0 I can manage that. +0 If it’s part of the deal. +0
+Followup Do you want to run away? +0 You have to face it. +3 So what if it is? +3
+Rank 7
+Response 1 Maybe. +0 Who Knows? +0 Were you frustrated? +0
+Response 2 Is she scary? +0 Is she strict? +0 
+Response 3 You okay? +3 That was a big sigh. +0 She’s a real taskmaster. +0
+Response 4 That isn’t true. +3 You need more confidence. +0 That’s just a mental block. +0
+Response 5 It’ll be like a duet. +0 You’ll become stronger. +0 
+Response 6 Of course. +3 I could watch you forever. +3 Another love confession? +3
+Followup I was internally screaming. +0 Yeah, it was a breeze. +0 I love a good challenge. +3
+Rank 8
+Response 1 Walk up to Sumire. +3 Watch her from a distance. +0 Slowly walk away. +0
+Response 2 Look at yourself. +0 You’re just standing out. +0 
+Response 3 Try to stay positive. +3 I’m here for you. +3 It’ll work out. +3
+Response 4 What is it? +0 …… +0 
+Response 5 You started it. +0 What, I can’t look at you? +0 
+Response 6 It looks great. +3 You look really cute. +3 I’m in love. +3
+Response 7 Did I help? +0 You found your answer? +0 
+Response 8 I see… +0 So that’s how it was. +0 
+Response 9 That’s how it should be. +3 Sounds like progress. +3 
+Followup The airsoft shop. +0 The resale shop. +3 Online. +3
+Rank 9
+Response 1 It’s no problem. +3 We’ll call it holiday hours. +3 
+Response 2 Definitely. +3 Of course. +3 
+Response 3 Of course I do. +3 Vaguely… +0 What about it? +0
+Response 4 I know you did. +3 You’re not worthless. +3 This is a new beginning. +3
+Response 5 What’s going on? +0 There’s something else? +0 Go ahead. +3
+Response 6 What? +0 In luh? +0 
+Response 7 Let’s stay friends, okay? +0 I love you too. +0 (ROMANCE) 
+Response 8 Calm down. +3 Take your time. +3 
+Response 9 So? Any different? +3 You are so red right now. +3 You’re so cute. +3
+Followup Get used to it. +3 Should I hang up…? +0 That’s just how it is. +0
+Rank MAX
+(ROMANCE)
+Response 1 You look radiant today. +0 Now I’m getting nervous. +0 
+Response 2 It’s all Sumire. +0 Just watch. +0 
+Response 3 Calm down. +0 Don’t rush it. +0 
+Response 4 You must be happy. +0 I’m so relieved. +0 It’s only natural, Sumire. +0
+Response 5 And that is…? +3 What do you mean? +3 Is it someone you love? +3
+Response 6 And there’s more to come. +0 You were amazing out there. +0 
+Response 7 I’ll stop if you want. +0 I feel the same way. +0 I don’t want to let you go. +0
+Followup I’m counting on you. +3 Don’t get ahead of yourself. +3 We’re our world’s champions. +3
