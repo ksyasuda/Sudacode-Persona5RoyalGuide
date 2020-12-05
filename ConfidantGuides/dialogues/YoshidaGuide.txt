@@ -1,0 +1,37 @@
+Rank 1
+Followup Of course. +1 If I must. +0 Let me write this down. +3
+Rank 2
+Response 1 I want to change the world. +0 I want to improve my speech. +2 I’m not sure… +0
+Response 2 One with conviction. +2 A popular one. +0 I don’t know yet. +2
+Response 3 That was helpful. +2 I knew that already. +0 What I want to accomplish? +0
+Followup It was helpful. +2 Somewhat. +0 It changed my whole outlook. +2
+Rank 3
+Response 1 Yes, Mr. Yoshida told me. +0 No, and I don’t care. +0 
+Response 2 His message. +2 No His speaking skills. +2 It’s hard to say. +0
+Followup I will. +0 I’m not sure I get it. +0 You think I’ll ever find it? +2
+Rank 4
+Response 1 Stop interrupting him. +0 You’re annoying the audience. +0 Just shut up and listen. +0
+Response 2 Yep. +0 What do you think? +0 
+Response 3 The ex-convict has a point. +0 Listen to what he has to say. +0 So what if he’s No-Good Tora? +0
+Response 4 I couldn’t help myself. +2 I just spoke the truth. +0 
+Followup I will. +2 I’m not sure I can. +0 Can’t forget your roots. +2
+Rank 5
+Response 1 I think so. +2 Don’t let your guard down. +0 The media doesn’t matter. +3
+Rank 6
+Response 1 I’m for them. +2 I’m against them. +0 I don’t really care. +3
+Response 2 I’d decline. +3 I’d take the offer. +0 I’d leave it to chance. +2
+Followup I’ll keep this in mind. +2 Lose sight of who I am? +0 You make quite a case. +2
+Rank 7
+Response 1 You should decline. +2 That’s a sweet deal. +0 I wasn’t paying attention. +0
+Response 2 He’s not No-Good Tora. +0 Call him Mr. Yoshida. +0 He’ll get elected this time. +0
+Response 3 That’s not for you to decide. +0 Maybe… +0 I still believe in him. +0
+Rank 8
+Response 1 Are you going to do it? +0 Don’t do it. +0 That’s a difficult decision. +2
+Response 2 Stick to your beliefs. +3 Clear your name. +0 Get elected. +0
+Response 3 What good would that do? +0 So what if you’re right? +0 …… +0
+Followup I’ll never foget that. +2 It’s tougher than it seems. +2 …… +0
+Rank 9
+Response 1 Do your best. +3 Break a leg. +0 I’m getting nervous. +2
+Response 2 What are you talking about? +0 You had a change of heart. +2 …… +0
+Rank MAX
+Response 1 Your true self was revealed. +3 You’re going to be popular. +2 Don’t let your guard down. +3

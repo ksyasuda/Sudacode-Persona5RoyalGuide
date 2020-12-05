@@ -44,7 +44,9 @@ mapper = {'MAKOTO': 'Makoto Nijima', 'HARU': 'Haru Okumura', 'OKUMURA':
           'Sadayo Kawakami', 'ICHIKO OHYA': 'Ichiko Ohya', 'SHINYA ODA':
           'Shinya Oda', 'KASUMI': 'Kasumi Yoshizawa', 'YOSHIZAWA': 'Kasumi\
           Yoshizawa', 'KASUMI YOSHIZAWA': 'Kasumi Yoshizawa', 'HIFUMI':
-          'Hifumi Togo', 'TOGO': 'Hifumi Togo', 'HIFUMI TOGO': 'Hifumi Togo'}
+          'Hifumi Togo', 'TOGO': 'Hifumi Togo', 'HIFUMI TOGO': 'Hifumi Togo',
+          'YOSHIDA': 'Toranosuke Yoshida', 'TORANOSUKE': 'Toranosuke Yoshida',
+          'TORANOSUKE YOSHIDA': 'Toranosuke Yoshida'}
 
 
 ## List of available names for input
@@ -57,6 +59,46 @@ def isConfidant(name):
 def normalizeName(name):
     """Gets the name of the confidant used in the program from the name/keyword inputted by the user"""
     return mapper[name.strip().upper()]
+
+def get_path_to_file(confidant, isVerbose):
+    """Returns the path to the dialogue file for [confidant]"""
+    if isVerbose:
+        print('Getting path to file for confidant', confidant)
+    pathToScript = os.path.realpath(__file__)
+    if isVerbose:
+        print('Path to script =', pathToScript)
+    filepath = pathToScript[0:pathToScript.rfind('/')]
+    if isVerbose:
+        print('Path after strip =', filepath)
+
+    filepath += '/dialogues'
+    if confidant == 'Sadayo Kawakami':
+        filepath += '/KawakamiRomance.txt'
+    elif confidant == 'Makoto Nijima':
+        filepath += '/MakotoRomance.txt'
+    elif confidant == 'Kasumi Yoshizawa':
+        filepath += '/KasumiRomance.txt'
+    elif confidant == 'Hifumi Togo':
+        filepath += '/HifumiRomance.txt'
+    elif confidant == 'Tae Takemi':
+        filepath += '/TakemiRomance.txt'
+    elif confidant == 'Chihaya Mifune':
+        filepath += '/ChihayaRomance.txt'
+    elif confidant == 'Ichiko Ohya':
+        filepath += '/OhyaRomance.txt'
+    elif confidant == 'Haru Okumura':
+        filepath += '/HaruRomance.txt'
+    elif confidant == 'Futaba Sakura':
+        filepath += '/FutabaRomance.txt'
+    elif confidant == 'Ann Takamaki':
+        filepath += '/AnnRomance.txt'
+    elif confidant == 'Toranosuke Yoshida':
+        filepath += '/YoshidaGuide.txt'
+    elif confidant == 'Yusuke Kitagawa':
+        filepath += '/YusukeGuide.txt'
+    if isVerbose:
+        print('Full path', filepath)
+    return filepath
 
 def listConfidants():
     """Prints the list of available names/keywords that can be used when selecting a confidant"""
@@ -166,42 +208,6 @@ def findBestAnswer(parts, isVerbose):
     bestAnswer = ' '.join(bestAnswer)
     after_plus = bestAnswer[bestAnswer.find('+') + 1]
     return bestAnswer
-
-def get_path_to_file(confidant, isVerbose):
-    """Returns the path to the dialogue file for [confidant]"""
-    if isVerbose:
-        print('Getting path to file for confidant', confidant)
-    pathToScript = os.path.realpath(__file__)
-    if isVerbose:
-        print('Path to script =', pathToScript)
-    filepath = pathToScript[0:pathToScript.rfind('/')]
-    if isVerbose:
-        print('Path after strip =', filepath)
-
-    filepath += '/dialogues'
-    if confidant == 'Sadayo Kawakami':
-        filepath += '/KawakamiRomance.txt'
-    elif confidant == 'Makoto Nijima':
-        filepath += '/MakotoRomance.txt'
-    elif confidant == 'Kasumi Yoshizawa':
-        filepath += '/KasumiRomance.txt'
-    elif confidant == 'Hifumi Togo':
-        filepath += '/HifumiRomance.txt'
-    elif confidant == 'Tae Takemi':
-        filepath += '/TakemiRomance.txt'
-    elif confidant == 'Chihaya Mifune':
-        filepath += '/ChihayaRomance.txt'
-    elif confidant == 'Ichiko Ohya':
-        filepath += '/OhyaRomance.txt'
-    elif confidant == 'Haru Okumura':
-        filepath += '/HaruRomance.txt'
-    elif confidant == 'Futaba Sakura':
-        filepath += '/FutabaRomance.txt'
-    elif confidant == 'Ann Takamaki':
-        filepath += '/AnnRomance.txt'
-    if isVerbose:
-        print('Full path', filepath)
-    return filepath
 
 def printDialogueAnswers(confidant, isVerbose):
     """Prints the best (or first if there is a tie) answers for dialogue with the chosen confidant"""

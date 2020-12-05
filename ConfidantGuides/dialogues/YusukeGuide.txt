@@ -1,0 +1,43 @@
+Rank 1
+Followup Thanks. +2 I’ll try not to. +2 I’ll be asking a lot. +3
+Rank 2
+Response 1 It’s novel. +2 It’s enigmatic. +2 …What is it? +0
+Response 2 I can’t wait. +3 I hope you’re right. +3 Will people like it? +0
+Followup You’re already doing enough. +2 I’m looking forward to it. +0 Will you really? +0
+Rank 3
+Response 1 That was harsh. +0 What a dick. +0 Don’t let it bother you. +2
+Response 2 Stop exaggerating. +0 This is just the beginning. +0 Stand up. +0
+Response 3 You’re really giving up? +2 This isn’t like you. +3 Stand up, Ysuke. +0
+Response 4 How exactly? +2 That’s the spirit. +2 
+Followup That’s the spirit. +2 You’re taking this too far. +0 That’s all? +0
+Rank 4
+Response 1 What are we doing here? +0 Why are we in a boat? +2 I should bring a girl here. +2
+Response 2 Love comes in all forms. +3 Maybe you should train more. +2 You have a wild imagination. +0
+Followup Don’t get discouraged. +2 Just keep drawing. +0 You lack love yourself. +0
+Rank 5
+Response 1 Make me beautiful. +0 I dunno if I can do it… +2 Do you want me to strip? +3
+Response 2 I’m sure you will. +3 It doesn’t look like it. +3 Do you want to give up? +2
+Followup Don’t overthink it. +0 You have to keep drawing. +0 There’s still hope. +2
+Rank 6
+Level 4 Proficiency Required
+Response 1 It feels nostalgic. +2 Why are we here again? +0 Are you going in? +0
+Response 2 We should get it fixed. +0 Let’s force it open. +0 
+Response 3 Are you OK? +0 You’re not looking so good. +0 
+Response 4 Maybe he was sympathetic. +3 He somehow knew you had skill. +2 I couldn’t possibly tell you. +3
+Followup He had a certain dignity. +2 He seems reliable. +0 I’m not sure. +0
+Rank 7
+Response 1 That’s a great name. +0 What do you mean? +2 Handsome…? +0
+Response 2 The truth is within you. +3 Money is important. +0 
+Followup Calm down. +2 It’s not a crime to enjoy sushi. +2 Let’s go again sometime. +0
+Rank 8
+Response 1 Scenery is always nice. +0 I’d say Morgana. +0 It has to be Ann. +2
+Response 2 What’s wrong with that? +2 The same applies to everyone. +0 You’ve really grown, Yusuke. +3
+Rank 9
+Response 1 Her love for her son. +3 The pain of separation. +3 I don’t know. +2
+Response 2 You’ve really changed, Yusuke. +3 That’s a great idea. +2 It won’t be easy. +0
+Rank MAX
+Response 1 It turned out well. +0 So you added hope? +0 
+Response 2 You provoked Yusuke on purpose? +0 Are you scheming something? +0 
+Response 3 “He”? +0 Do you mean Madarame? +0 
+Response 4 He was a good man deep down. +3 That was another aspect of him. +3 
+Response 5 Yeah… +0 You’re stranger, Yusuke. +0 Are you sure about this? +0
