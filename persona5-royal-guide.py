@@ -32,13 +32,14 @@ def printHelp():
 def confidantHelp():
     """Prints the help menu for the confidant mode"""
     print('\nConfidant Help Menu\n')
-    print('Currently the only working option is dialog\n')
+    print('Currently the only working options are dialog and list\n')
     print('Usage:')
-    print('./persona5-royal-guide.py -c ["dialog | hangout | all"]')
-    print('Upon entering confidant mode, you\'ll be prompted to input the name of the chosen confidant')
+    print('./persona5-royal-guide.py -c [dialog | hangout | list | all] [confidant name/keyword] (optional)')
+    print('Unless you provided the confident as an argument, upon entering confidant mode, you\'ll be prompted to input the name of the chosen confidant')
     print('Options\n')
-    print('dialogue\t\t\t', 'Confidant dialog option to get the best answers for each rank of the chosen confidant')
+    print('dialogue\t\t', 'Confidant dialog option to get the best answers for each rank of the chosen confidant')
     print('hangout\t\t\t', 'Prints the typical hangout spot for the chosen confidant')
+    print('list\t\t\t', 'Prints all the names/keywords of confidants that can be used during confidant selection or passed as an argument to the script')
     print('all\t\t\t', 'Prints all information (dialogue options and hangout locations) about the chosen confidant')
 
 def main():
@@ -46,6 +47,8 @@ def main():
     days = {}
     argv = sys.argv
     argc = len(argv)
+    provided_confidant = ''
+    conf_given = False
     try:
         options, remainder = getopt.gnu_getopt(argv[1:], 'vhac:', ['help=',
                                                                'answers=',
@@ -82,6 +85,10 @@ def main():
                     confidantHelp()
                     exit(1)
                 confidantArg = arg
+                if p5rConfidantGuide.isConfidant(argv[argc-1]):
+                    conf_given = True
+                    provided_confidant = argv[argc-1]
+
     else:
         printHelp()
 
@@ -102,15 +109,21 @@ def main():
             # printAllConfidantInfo()
             pass
         elif arg == 'dialogue' or arg == 'd':
-            confidant = getConfidant(isVerbose)
-            p5rConfidantGuide.printDialogueAnswers(confidant)
+            if not conf_given:
+                confidant = getConfidant(isVerbose)
+                p5rConfidantGuide.printDialogueAnswers(confidant)
+            else:
+                provided_confidant = p5rConfidantGuide.normalizeName(provided_confidant)
+                p5rConfidantGuide.printDialogueAnswers(provided_confidant)
             pass
         elif arg == 'hangout' or arg == 'h':
             confidant = getConfidant(isVerbose)
             # printHangoutLocation(confidant)
             pass
+        elif arg == 'list' or arg == 'l':
+            p5rConfidantGuide.listConfidants()
         else:
-            print('options are: "dialogue", "hangout", and "all"')
+            print('options are: "dialogue", "hangout", "list", and "all"')
             # printAllConfidantInfo()
             pass
 
