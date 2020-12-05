@@ -16,7 +16,7 @@ def getConfidant(isVerbose):
 
 def printHelp():
     """Prints the help menu for the script"""
-    print('Sudacode Persona 5 Royal Guide Help Menu\n')
+    print('\nSudacode Persona 5 Royal Guide Help Menu\n')
     print('Words of Advice:')
     print('When In Doubt, Factor Out - Mr. Kim\n')
     print('USAGE')
@@ -29,15 +29,39 @@ def printHelp():
     print('-a, --answers','\t\tno extra args\t\t', 'Get answers for in-game questions asked during class and exams')
     print('-c, --confidants', '\tone required arg\t', 'Get info about the confidants')
 
+def confidantHelp():
+    """Prints the help menu for the confidant mode"""
+    print('\nConfidant Help Menu\n')
+    print('Currently the only working option is dialog\n')
+    print('Usage:')
+    print('./persona5-royal-guide.py -c ["dialog | hangout | all"]')
+    print('Upon entering confidant mode, you\'ll be prompted to input the name of the chosen confidant')
+    print('Options\n')
+    print('dialogue\t\t\t', 'Confidant dialog option to get the best answers for each rank of the chosen confidant')
+    print('hangout\t\t\t', 'Prints the typical hangout spot for the chosen confidant')
+    print('all\t\t\t', 'Prints all information (dialogue options and hangout locations) about the chosen confidant')
+
 def main():
     """The literal main"""
     days = {}
     argv = sys.argv
     argc = len(argv)
-    options, remainder = getopt.gnu_getopt(argv[1:], 'vhac:', ['help=',
+    try:
+        options, remainder = getopt.gnu_getopt(argv[1:], 'vhac:', ['help=',
                                                                'answers=',
                                                                'verbose=',
                                                                'confidants='])
+    except getopt.GetoptError:
+        for i in range(len(argv)):
+            ## go through each argument and check for a 'c' or 'confidant' since
+            ## no other argument has 'c' in the name 
+            if 'c' in argv[i] or 'confidant' in argv[i]:
+                print('Invalid number of arguments in command', ' '.join(argv[0:]))
+                print('Confidant mode requires additional input...')
+                confidantHelp()
+                exit(1)
+        print('Invalid number of arguments in command', ' '.join(argv[0:]))
+        exit(1)
     isVerbose = False
     helpFlag = False
     ansFlag  = False
@@ -54,6 +78,9 @@ def main():
                 ansFlag = True
             elif opt in ('-c', '--confidants'):
                 confidantFlag = True
+                if arg == None:
+                    confidantHelp()
+                    exit(1)
                 confidantArg = arg
     else:
         printHelp()

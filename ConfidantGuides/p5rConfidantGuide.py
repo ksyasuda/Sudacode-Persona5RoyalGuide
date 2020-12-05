@@ -62,8 +62,9 @@ def findBestAnswer(parts):
             scores.append(part[1])
             indicies.append(count)
         count += 1
-    maxVal = -99999
-    index = 0
+
+    maxVal = -99999 ## initialize to low val
+    index = 0 ## idx of highest value answer
     count = 0
     allSame = True
     ## indicies will only be size 1 when all same value
@@ -75,19 +76,23 @@ def findBestAnswer(parts):
             allSame = False
         count += 1
 
+    ## If all the options have the same score
     if allSame:
         return 'Pick Any'
 
     bestAnswer = ''
     if index == 0: 
+        ## if best option is the left most option
         bestAnswer = parts[:indicies[index]+1]
     else:
-        beginIndex = indicies[index-1] + 1
+        beginIndex = indicies[index-1]
         endIndex = indicies[index]
         bestAnswer = parts[beginIndex:endIndex]
         bestAnswer += parts[endIndex]
+        ## get rid of possible leading tab
         if bestAnswer[0][0:1] == '\t':
             bestAnswer = bestAnswer[2:]
+    ## best answer = an array containing each word in the answer
     bestAnswer = ' '.join(bestAnswer)
     return bestAnswer
 
@@ -100,10 +105,13 @@ def printDialogueAnswers(confidant):
             lines = f.readlines()
             first = 0
             for line in lines:
+                ## get rid of unwanted blank lines
+                if len(line) == 0 or line == '\n':
+                    continue
                 parts = line.split(' ')
                 if parts[0] == 'Rank':
                     ## make the Rank # bold
-                    temp = f'{bcolors.BOLD}'
+                    temp = f'\n{bcolors.BOLD}'
                     temp += parts[0]
                     parts[0] = temp
                     temp = f'{bcolors.BOLD}'
@@ -124,4 +132,4 @@ def printDialogueAnswers(confidant):
                     continue
                 else:
                     best = findBestAnswer(parts)
-                    print('Best Answer: ', best)
+                    print(f'{bcolors.ENDC}Best Answer: ', best)
