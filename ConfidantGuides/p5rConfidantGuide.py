@@ -87,25 +87,36 @@ def chooseConfidant(isVerbose):
         print(confidant, 'found in mapper... returning', mapper[temp])
     return mapper[temp]
 
-def cleanupLine(bestAnswer):
+def cleanupLine(bestAnswer, isVerbose):
     """Cleans up the line by removing and leading 'Response' or 'Followup' strings and remove unwanted spaces"""
     ## One last check to get rid of the lingering 'Response' or 'Followup' text at beginning of some lines
     if len(bestAnswer) != 0 and bestAnswer[0] == 'Response':
+        if isVerbose:
+            print('"Response" found in string')
+            print('Popping off first two values of list...') 
         bestAnswer.pop(0)
         bestAnswer.pop(0)
     elif bestAnswer[0] == 'Followup':
+        if isVerbose:
+            print('"Followup" found in string')
+            print('Popping off first value of list...') 
         bestAnswer.pop(0)
     ## Account for instance where + and the value are separate values at end of list
     if bestAnswer[len(bestAnswer) - 2] == '+':
+        if isVerbose:
+            print('Extra space detected')
+            print('Appending to second to last element and pop off last element of the list')
         bestAnswer[len(bestAnswer) - 2] += bestAnswer[len(bestAnswer) - 1]
         bestAnswer.pop()
 
 
-def findBestAnswer(parts):
+def findBestAnswer(parts, isVerbose):
     """Parses the parts vector for the best answer for each dialogue option"""
     scores = []
     indicies = []
     count = 0
+    if isVerbose:
+        print('parsing line', ' '.join(parts[0:]))
     for part in parts:
         ## If a + is there a single digit follows guaranteed
         if part[0] == '+':
@@ -117,17 +128,23 @@ def findBestAnswer(parts):
     index = 0 ## idx of highest value answer
     count = 0
     allSame = True
+    if isVerbose:
+        print('line parsed... finding index of best option')
     ## indicies will only be size 1 when all same value
     for score in scores:
         if int(score) > int(maxVal):
             maxVal = int(score)
             index = count
         if count > 0 and scores[count] != scores[count - 1]:
+            if isVerbose:
+                print('All scores NOT the same')
             allSame = False
         count += 1
 
     ## If all the options have the same score
     if allSame:
+        if isVerbose:
+            print('All scores same')
         return 'Pick Any'
 
     bestAnswer = ''
@@ -144,17 +161,23 @@ def findBestAnswer(parts):
         bestAnswer += parts[endIndex]
         ## shouldn't need this anymore
 
-    cleanupLine(bestAnswer)
+    cleanupLine(bestAnswer, isVerbose)
     ## best answer = an array containing each word in the answer
     bestAnswer = ' '.join(bestAnswer)
     after_plus = bestAnswer[bestAnswer.find('+') + 1]
     return bestAnswer
 
-def printDialogueAnswers(confidant):
-    """Prints the best (or first if there is a tie) answers for dialogue with the chosen confidant"""
-    print(f'{bcolors.UNDERLINE}{bcolors.BOLD}{bcolors.HEADER}Dialog Answers for', confidant + f':{bcolors.ENDC}')
+def get_path_to_file(confidant, isVerbose):
+    """Returns the path to the dialogue file for [confidant]"""
+    if isVerbose:
+        print('Getting path to file for confidant', confidant)
     pathToScript = os.path.realpath(__file__)
+    if isVerbose:
+        print('Path to script =', pathToScript)
     filepath = pathToScript[0:pathToScript.rfind('/')]
+    if isVerbose:
+        print('Path after strip =', filepath)
+
     filepath += '/dialogues'
     if confidant == 'Sadayo Kawakami':
         filepath += '/KawakamiRomance.txt'
@@ -176,7 +199,21 @@ def printDialogueAnswers(confidant):
         filepath += '/FutabaRomance.txt'
     elif confidant == 'Ann Takamaki':
         filepath += '/AnnRomance.txt'
+    if isVerbose:
+        print('Full path', filepath)
+    return filepath
+
+def printDialogueAnswers(confidant, isVerbose):
+    """Prints the best (or first if there is a tie) answers for dialogue with the chosen confidant"""
+    print(f'{bcolors.UNDERLINE}{bcolors.BOLD}{bcolors.HEADER}Dialog Answers for', confidant + f':{bcolors.ENDC}')
+    if isVerbose:
+        print('Getting path to dialogue file for', confidant)
+    filepath = get_path_to_file(confidant, isVerbose)
+    if isVerbose:
+        print('Path =', filepath)
     with open(filepath) as f:
+        if isVerbose:
+            print(filepath, 'opened')
         lines = f.readlines()
         first = 0
         for line in lines:
@@ -192,6 +229,7 @@ def printDialogueAnswers(confidant):
                 temp = f'{bcolors.BOLD}'
                 temp += parts[1]
                 parts[1] = temp
+                temp += f'{bcolors.ENDC}'
                 print(parts[0], parts[1])
             elif parts[0] == 'Level' or parts[0] == 'MAX':
                 ## make entire Level # X required bold
@@ -206,13 +244,19 @@ def printDialogueAnswers(confidant):
                 temp += color_map[attribute]
                 for i in range(len(parts)):
                     temp += ' ' + parts[i]
+                temp += f'{bcolors.ENDC}'
                 print(temp)
                 continue
             elif parts[0] == '(ROMANCE)':
                 temp = f'{bcolors.WARNING}'
                 temp += parts[0]
+                temp += f'{bcolors.ENDC}'
                 print(temp)
                 continue
             else:
-                best = findBestAnswer(parts)
+                if isVerbose:
+                    print(f'{bcolors.ENDC}finding best answer...')
+                best = findBestAnswer(parts, isVerbose)
+                if isVerbose:
+                    print(f'{bcolors.ENDC}best answer found...')
                 print(f'{bcolors.ENDC}Answer:', best)

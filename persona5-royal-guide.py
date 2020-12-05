@@ -41,6 +41,7 @@ def confidantHelp():
     print('hangout\t\t\t', 'Prints the typical hangout spot for the chosen confidant')
     print('list\t\t\t', 'Prints all the names/keywords of confidants that can be used during confidant selection or passed as an argument to the script')
     print('all\t\t\t', 'Prints all information (dialogue options and hangout locations) about the chosen confidant')
+    p5rConfidantGuide.listConfidants()
 
 def main():
     """The literal main"""
@@ -111,10 +112,10 @@ def main():
         elif arg == 'dialogue' or arg == 'd':
             if not conf_given:
                 confidant = getConfidant(isVerbose)
-                p5rConfidantGuide.printDialogueAnswers(confidant)
+                p5rConfidantGuide.printDialogueAnswers(confidant, isVerbose)
             else:
                 provided_confidant = p5rConfidantGuide.normalizeName(provided_confidant)
-                p5rConfidantGuide.printDialogueAnswers(provided_confidant)
+                p5rConfidantGuide.printDialogueAnswers(provided_confidant, isVerbose)
             pass
         elif arg == 'hangout' or arg == 'h':
             confidant = getConfidant(isVerbose)
