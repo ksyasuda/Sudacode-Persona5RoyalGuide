@@ -1,0 +1,55 @@
+Rank 1
+Followup Sounds good. +2 That was our deal. +3 Thanks. I’m counting on you. +2
+Rank 2
+MAX Proficiency Required
+Response 1 You like coffee? +3 Are you opening a café? +3 Are you starting a farm? +3
+Response 2 What do you mean? +0 So you won’t accept his offer? +0 He sounds suspicious. +3
+Response 3 This is a complex issue. +3 You might be wrong. +3 Maybe you should fire him. +3
+Followup Moonlight Carrot. +3 Sun Tomato. +3 Jewel Melon. +3
+Rank 3
+Response 1 A phantom thief wouldn’t worry. +2 They won’t find out. +3 It’ll be OK, I promise. +3
+Response 2 “I don’t want to go with you.” +3 “I’m afraid of flying.” +0 “We should break up.” +0
+Response 3 I have. +3 Not yet. +3 Too many times to count. +3
+Followup response. +3 Sounds like a hassle. +0 Which friend? +0
+Rank 4
+Response 1 That’s pricey. +3 What a rip-off. +0 It must be amazing. +3
+Response 2 I can’t let you do that. +3 Let me cover the bill. +3 Kthx. +3
+Response 3 You mean… poop!? +3 I can taste the elephant. +3 Excuse me while I vomit. +3
+Response 4 Hands off my cat. +0 I’d rather not think about it. +0 Let’s ask him. +3
+Response 5 He seemed nice enough. +0 He was a little sketchy. +0 I’m not really sure. +3
+Followup I don’t mind. +0 It was rather intriguing. +0 Let’s get coffee again sometime. +3
+Rank 5
+Response 1 Trust who you want to trust. +0 Somebody’s telling the truth. +3 Trust no one. +3
+Response 2 Are you really considering it? +0 You can’t give in. +0 There has to be another way. +3
+Response 3 That doesn’t matter now. +3 You didn’t have a choice. +0 I don’t think so. +3
+Followup Are you okay? +0 We’re all here for you. +0 Pinch yourself. +3
+Rank 6
+Response 1 That’s fascinating +3 You’re so studious. +3 Can you make some for me? +3
+Response 2 I had no idea. +3 That’s a surprise. +0 I could’ve guessed that. +0
+Response 3 You might be right. +0 That would be bad. +3 Black like coffee? +3
+Response 4 You don’t need to apologize. +0 That guy is horrible. +0 
+Response 5 You’re not powerless. +0 Be strong, Haru. +3 
+Followup You can talk to me anytime. +3 Let him say what he wants. +3 Wanna run away together? +0
+Rank 7
+Response 1 You look exhausted. +0 Don’t overwork yourself. +0 Let’s go see the nurse. +0
+Response 2 That sounds really tough… +3 You should ask some employees. +0 What do you want to do? +3
+Response3 What does Takakura-san think? +3 There has to be a way. +3 You should tell him that. +3
+Response 4 That’s the spirit. +3 You can do it, Haru. +3 
+Followup Don’t relax yet. +0 I’ll always have your back. +3 So what’s this “magic item”? +0
+Rank 8
+Response 1 The soil? +3 The planters? +0 That beetle over there? +0
+Response 2 It’ll help him understand you. +3 He’s going to love it. +3 He might not like it. +3
+Response 3 I’ll be cheering for you. +3 You’re amazing, Haru. +3 Are you sure you can do it? +3
+Followup You can understand them? +0 It’s in your nature to nurture. +3 I want some too. +3
+Rank 9
+Response 1 Don’t forget to breathe. +0 Believe in yourself. +0 I’m here for you, Haru. +0
+Response 2 I’m sure you’ll do great. +3 It’ll be fine. +3 Give it all you’ve got, Haru. +3
+Response 3 You’re very welcome. +3 You did amazing. +3 Do I get a reward? +0
+Response 4 He saw us as good friends. +0 I like you too, Haru. +0 (ROMANCE) 
+Followup What’re you up to? +0 I wanted to hear your voice. +3 I miss you. +3
+Rank MAX
+(ROMANCE)
+Response 1 Will things be OK? +0 That’s good to hear. +3 You’ve done great, Haru. +3
+Response 2 I’m sure you’ll succeed. +3 This won’t be easy. +3 It all comes down to flavor. +3
+Response 3 If you want. +0 Probably not. +0 It’s hard work, you know. +0
+Response 4 I’m glad too. +3 Don’t deny yourself. +3 Just my teammate? +3

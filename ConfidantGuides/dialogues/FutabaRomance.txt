@@ -1,0 +1,51 @@
+Rank 2
+Level 4 Kindness Required
+Response 1 That wouldn’t solve anything. +0 That’s a great idea. +2 
+Response 2 If we work together. +3 Want me to help? +2 I don’t know. +0
+Response 3 Sounds good to me. +0 Can you tell me again? Repeat Response 
+Followup I bet it will. +2 I’m not sure. +0 Why not ask him directly? +0
+Rank 3
+Response 1 I what? +0 So you’re OK? +0 I was about to come find you. +3
+Response 2 Good to see you again. +3 You’re the one who appeared. +2 You need to be more careful. +0
+Followup It’ll only get tougher. +0 You will. +0 We’ll both do our best. +2
+Rank 4
+Response 1 Nope. +2 Let’s do this together. +3 If you want. +0
+Response 2 No, you’re talented. +0 I bet they were just surprised. +0 
+Response 3 Not at all. +2 Everyone does it. +2 I think it’s cute. +3
+Followup We’ll take it slow. +2 You need more training. +0 I’ll help you anytime. +2
+Rank 5
+Response 1 He’s in my class. +0 Friend might be a bit much. +0 
+Response 2 I think you’re right. +3 No. +0 Your… what? +2
+Response 3 What’s an NPC? +2 Savage. +0 He’s the protagonist. +3
+Followup You did great. +2 That’s nothing special. +0 Ding! Level up! +0
+Rank 6
+Response 1 Were you happy? +2 That must have been a shock. +3 How did you react? +0
+Response 2 You didn’t know any better. +2 Did you apologize to her? +0 Sounds like it was her fault. +0
+Response 3 Understood. +0 Someone’s pushy today. +0 
+Followup Are you running away again? +2 Let’s calm down first. +0 I’m right here with you. +0
+Rank 7
+Response 1 What horrible parents. +2 We have to put a stop to this. +2 Strange… how? +0
+Response 2 I’ll do it, for you. +3 We’ll show them the truth. +3 Give me some time. +2
+Rank 8
+Response 1 That’s incredible. +3 I’m glad to hear that. +3 Did you stutter at all? +2
+Response 2 You worked really hard too. +3 You’re making me blush… +2 Do I get a reward? +0
+Response 3 Fine by me. +0 That’s all? +0 
+Followup Congrats. +2 You’ve still got more. +0 Want more pats? +2
+Rank 9
+Response 1 You’ve really matured. +3 What if you get bullied again? +2 
+Response 2 That doesn’t sound healthy… +0 Are you OK, Futaba? +3 You’re imagining things. +2
+Response 3 If you want. +2 No way. +2 You’re giving up? +0
+Response 4 Because we’re teammates. +0 END Because I love you. +0 (ROMANCE) 
+Response 5-7 I would like that / If that’s OK with you. +0 Um, Hello? / Is something wrong? +0 Earth to Futaba? / Are you still alive? +0
+Followup Instant yakisoba. +0 Morgana. +0 Do I really have to say it? +2
+Rank MAX
+(ROMANCE)
+Response 1 What are you talking about? +0 Don’t worry about it. +0 …Pardoned? +0
+Response 2 Mission complete. +0 Nice job, Futaba. +0 You did great. +0
+Response 3 I know. +0 I don’t mind. +0 I like being close. +0
+Response 4 What’s wrong. +0 Come closer. +0 
+Response 5 Take your time. +3 You can do this. +3 We’ll do it together. +3
+Response 6 You can’t lose to her. +3 Do you want a job too? +2 
+Response 7 I honor my promises. +0 Just keep it cheap. +0 You remember that? +0
+Response 8 I’m counting on you. +0 That’s a lot of pressure. +0 
+Response 9 You already have that right. +3 Took you long enough to ask. +3 I want that right too. +3

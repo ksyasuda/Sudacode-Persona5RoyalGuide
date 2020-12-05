@@ -1,0 +1,65 @@
+Rank 2
+Level 2 Kindness Required
+Response 1 Are you feeling better now? +3 She’s so strong. +3 So are you friends again? +2
+Response 2 You can’t blame yourself. +2 You might be right. +3 
+Response 3 It was no big deal. +2 I couldn’t just ignore you. +3 
+Response 4 I’ll help. +3 Let’s find it together. +3 
+Followup Of course, You’re my teammate. +2 Leave it to me. +2 The no-refills thing again? +2
+Rank 3
+Response 1 How’s that? +0 You’re amazing. +0 
+Response 2 What kind of stuff…? +0 That’s your training…? +0 I don’t get it. +0
+Response 3 You’re stupid. +0 You’re an airhead. +0 You’re… unique. +0
+Response 4 You’re a hard worker. +0 That response was annoying. +0 Can we stop yet? +0
+Response 5 I like you. +2 I love you. +2 Can we stop yet? +3
+Response 6 Listen to me. +0 This won’t help your heart. +0 You’re a genius… +0
+Response 7 You’re right. +0 You finally get it. +0 
+Response 8 That’s odd. +2 Has that happened to you? +3 
+Response 9 Are you lonely? +0 That freedom sounds nice. +2 
+Followup Could be. +2 You’re so self-conscious. +0 Was she a child model? +0
+Rank 4
+Response 1 I know what you mean. +3 I’m not sure I follow. +0 That comes down to you. +2
+Response 2 That was mean of her. +2 That’s hilarious. +3 Was she right? +0
+Response 3 Tell me. +3 I’m afraid to know. +2 …Who? +0
+Response 4 Good idea. +3 How exactly? +2 
+Response 5 That’s not going to work. +0 You haven’t learned anything. +0 Good luck with that. +3
+Followup I train everyday. +2 Not really. +0 I carry Morgana in my bag. +2
+Rank 5
+Response 1 Maybe. +0 Give it up. +2
+Response 2 You’re outmatched. +0 She’s amazing, huh… +2
+Response 3 It had grace. +2 She’d be a great Phantom Thief. +0
+Response 4 So how do you do it? +0 Tell me more. +0
+Response 5 I figured that much. +0 I mean, that’s why it’s “fake.” +0
+Rank 6
+Response 1 It seems that way. +3 That’s such a simple solution. +0 If it’s a friend, yeah. +2
+Response 2 How so? +0 Was she working hard? +0 Was she in pain? +0
+Response 3 You’re not weak. +0 It’s because you’re kind. +0 
+Response 4 Comfort her. +3 Listen to what she has to say. +2 Show her your own strength. +3
+Followup Someone’s motivated. +2 I’ll cheer you on. +2 You gonna be okay? +0
+Rank 7
+Response 1 It’s a trap! +0 She admires you. +2 
+Response 2 So she could show you up. +0 Because you’re a natural beauty. +0 
+Response 3 Cheer up. +0 Please don’t cry. +0 
+Response 4 You already are one. +0 Go get ‘em, tiger. +2 What about your action movies…? +0
+Followup You got this. +2 Don’t strain yourself. +0 Trying to be like Mika? +0
+Rank 8
+Response 1 That’s a lot of work… +0 You have some real guts. +3 You’re beautiful as is. +2
+Response 2 There’s no doubt in my mind. +3 I hope so. +3 Good luck finding it. +3
+Response 3 Good advice. +0 You’re so dumb, Ryuji… +0 
+Response 4 She’ll be happy to hear that. +3 I’m sure she already knows. +3 
+Followup That’s probably it. +2 I wonder. +0 You can ask her yourself. +2
+Rank 9
+Response 1 It’s dangerous up here. +0 Step away from the ledge. +0 Why did you want to come here? +0
+Response 2 And? +0 She’s gone, isn’t she? +0 
+Response 3 Hang in there. +3 I believe in you, Ann. +3 
+Response 4 You have me. +0 (ROMANCE) You have the others. +0 END 
+Response 5 You said “I love you.” +0 I didn’t hear you. +0 
+Followup Of course. +2 I’m yours forever. +2 That’s up to you. +0
+Rank MAX
+(ROMANCE)
+Response 1 You really gave it your all. +3 You still have a ways to go. +2 Everyone was complimenting you. +3
+Response 2 That’s so embarrassing. +2 I’ll be there with you. +3 You can do it, Ann. +3
+Response 3 What’s wrong? +0 It’s just the two of us. +0 
+Response 4 Of course. +3 Anything for you. +3 
+Response 5 I will. +0 I already am. +0 
+Response 6 Of course. +0 I should be asking you that. +0 
+Response 7 Couples? +0 Just Once? +0 
