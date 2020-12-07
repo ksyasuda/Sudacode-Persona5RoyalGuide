@@ -54,7 +54,6 @@ def readQuestions(days, isVerbose):
         for i in range(len(lines)):
             # first date already set skip
             # don't need empty lines either
-            print('first word', lines[i][:lines[i].find(' ')])
             if i == 0 or lines[i][:lines[i].find(' ')] in months:
                 continue
             parts = lines[i].split(' ')
