@@ -44,7 +44,7 @@ def readQuestions(days, isVerbose):
     filepath = pathToScript[0:pathToScript.rfind('/')]
     filepath += '/P5RClassroomAnswers.txt'
     months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
-              'August', 'November', 'December']
+              'August',  'September', 'November', 'December']
     with open(filepath) as f:
         lines = f.readlines()
         # first line will be date 4/12
@@ -54,6 +54,7 @@ def readQuestions(days, isVerbose):
         for i in range(len(lines)):
             # first date already set skip
             # don't need empty lines either
+            print('first word', lines[i][:lines[i].find(' ')])
             if i == 0 or lines[i][:lines[i].find(' ')] in months:
                 continue
             parts = lines[i].split(' ')
@@ -64,7 +65,7 @@ def readQuestions(days, isVerbose):
                     print('DATE: ', parts[0], 'Q/A', day)
                 day = {}
                 date = parts[0] 
-            elif len(parts) > 2 and parts[0] == 'EXAMS':
+            elif len(parts) >= 2 and parts[0] == 'EXAMS':
                 # exams date string
                 days[date.rstrip()] = day
                 date = parts[1]
