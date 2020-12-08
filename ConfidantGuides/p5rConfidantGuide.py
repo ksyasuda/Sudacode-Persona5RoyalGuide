@@ -96,6 +96,8 @@ def get_path_to_file(confidant, isVerbose):
         filepath += '/YoshidaGuide.txt'
     elif confidant == 'Yusuke Kitagawa':
         filepath += '/YusukeGuide.txt'
+    elif confidant == 'Goro Akechi':
+        filepath += '/AkechiGuide.txt'
     if isVerbose:
         print('Full path', filepath)
     return filepath
@@ -165,6 +167,10 @@ def findBestAnswer(parts, isVerbose):
             scores.append(part[1])
             indicies.append(count)
         count += 1
+
+    # Akechi level 9
+    if len(scores) == 0 and parts[0] == 'Story':
+        return (f'{bcolors.BOLD}' + ' '.join(parts[0:])) + f'{bcolors.ENDC}'
 
     maxVal = -99999 ## initialize to low val
     index = 0 ## idx of highest value answer

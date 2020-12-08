@@ -1,0 +1,57 @@
+Rank 2
+Response 1 	You always seem so busy. +2 	Do you have no friends? +0
+Response 2 	Is that your win? +0 	Not bad. +0
+Response 3 	Shoot very carefully. +2 	I’ll go for a power shot. +2
+Response 4 	You used your right hand. +0 	…Aren’t you left-handed? +0
+Response 5 	Maybe i’ll be a detective. +2 	No holding back next time. +2 	I see a lot of things. +3
+Followup 	Sure. +0 	I’ll think about it. +0 	As rivals? +2
+Rank 3
+Level 3 Charm Required
+Response 1 	Got a sweet tooth, huh? +0 	Come here often? +0
+Response 2 	Should’ve figured. +3 	Your life must be so hard. +2 	I can shoo them away… +0
+Response 3 	You’ve done nothing wrong. +0 	Why the rush? +0
+Response 4 	How about we find out? +0 	Come here a sec. +0
+Response 5 	You looked great. +0 	It was a necessary evil. +0 	I should’ve taken a picture. +0
+Followup 	That was careless, huh? +0 	Wasn’t it fun? +2 	I can always dress you up again.
+Rank 4
+Response 1 	What kind of place is this? +0 	This looks shady… +0 	
+Response 2 	Do they have coffee? +2 	But I’m underage. +0 	Now this is my kind of club. +3
+Response 3 	Any recommendations? +3 	Anything’s fine by me. +2 	An ice-cold beer for me. +0
+Response 4 	It’s a great place. +2 	I feel a bit nervous. +0 	
+Response 5 	A run-down cafe. +0 	A shop with great coffee. +0 	I live there, actually. +0
+Response 6 	Pretty frequently. +3 	I can use a microwave. +3 	All I need is curry. +2
+Followup 	What are you talking about? +0 	I kinda get it. +2 	You really are having fun. +0
+Rank 5
+Response 1 	All the time. +0 	I’m not great at them. +0 	Have you played any? +0
+Response 2 	Are you used to gunplay? +2 	You took that seriously, huh. +0 	
+Response 3 	You wanted to be a hero? +3 	Very interesting. +2 	Hard to imagine. +0
+Response 4 	Sticking to your justice. +0 	Doing what people want. +0 	Neither, really. +0
+Followup 	You did fine. +2 	You’ve got a long way to go. +2 	You were getting cocky. +2
+Rank 6
+Response 1 	So relaxing… +2 	Seeing you here is weird. +0 	A while, huh? +3
+Response 2 	That was horrible of her. +0 	… You’ve been through a lot. +2 	
+Response 3 	This is nothing. +3 	I’ll stay until you’re ready. +3 	Are YOU okay? +2
+Response 4 	Same. +3 	I’m just fine. +0 	Guess I win. +2
+Response 5 	Because we get along. +2 	Because we’re similar. +2 	
+Response 6 	I think you’re right. +3 	I don’t know about that. +0 	Can I put my clothes on? +2
+Followup 	True. +0 	They’d probably love it. +0 	My bad, I guess. +2
+Rank 7
+Level 4 Knowledge Required
+Response 1 	Yeah, it’s convoluted. +2 	That’s why it’s so fun. +3 	
+Response 2 	The psychotic breakdowns. +0 	What’re you getting at? +0 	
+Response 3 	I’ve made up my mind. +0 	I won’t miss my shot. +0 	
+Response 4 	It’s thanks to you. +2 	I couldn’t let myself lose. +3 	
+Response 5 	But we’re teammates now. +0 	Wnat to join us? +0 	
+Response 6 	I’ll think about it. +0 	I’m not doing that. +0 	You’re my rival. +0
+Followup 	Do I? +0 	I don’t know. +0 	We’re rivals, aren’t we? +2
+Rank 8
+Response 1 	What’d you want to discuss? +0 	Why are we in Mementos? +0
+Response 2 	I thought you meant in pool. +0 	You want to fight? +0 	But why, though? +0
+Response 3 	All right. +0 	Let’s do this. +0
+Response 4 	Are you satisfied? +0 	Was that all you got? +0 	Do you want to keep going? +0
+Response 5 	I’d say the same for you. +0 	The feeling mutual. +0
+Response 6 	I definitely wouldn’t lose. +3 	I don’t know. +0 	Probably. +0
+Response 7 	Same here. +0 	Really hate losing, don’t you. +3
+Response 8 	I accept. +0 	Let me think about it. +0
+Rank 9 – MAX
+Story Progression
