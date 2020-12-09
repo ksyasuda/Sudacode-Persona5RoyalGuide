@@ -4,6 +4,16 @@ import sys
 import getopt
 from ClassroomAnswers import p5rClassroomQuestions
 from ConfidantGuides import p5rConfidantGuide
+from colors import colors
+
+CLEAR = colors.bcolors.ENDC
+RED = colors.bcolors.FAIL
+PINK = colors.bcolors.HEADER
+BOLD = colors.bcolors.BOLD
+UNDER = colors.bcolors.UNDERLINE
+GREEN = colors.bcolors.OKGREEN
+BLUE = colors.bcolors.OKBLUE
+YELLOW = colors.bcolors.WARNING
 
 def getConfidant(isVerbose):
     """Gets the formatted name of the confidant that the user needs information about"""
@@ -16,31 +26,31 @@ def getConfidant(isVerbose):
 
 def printHelp():
     """Prints the help menu for the script"""
-    print('\nSudacode Persona 5 Royal Guide Help Menu\n')
-    print('Words of Advice:')
-    print('When In Doubt, Factor Out - Mr. Kim\n')
-    print('USAGE')
-    print('./persona5-royal-guide.py [args]')
-    print('OR')
-    print('python persona5-royal-guide.py [args]\n')
-    print('ARGUMENTS')
-    print('-h, --help', '\t\tno extra args\t\t', 'Bring up the help menu')
-    print('-v, --verbose', '\t\tno extra args\t\t', 'Enable verbose output')
-    print('-a, --answers','\t\tno extra args\t\t', 'Get answers for in-game questions asked during class and exams')
-    print('-c, --confidants', '\tone required arg\t', 'Get info about the confidants')
+    print(f'\n{BOLD + UNDER + BLUE}Sudacode{CLEAR} {RED}Persona 5 Royal{CLEAR} {PINK}Guide{CLEAR}\n')
+    print(f'{UNDER}Words of Advice{CLEAR}:')
+    print(f'{BOLD}When In Doubt, Factor Out - Mr. Kim{CLEAR}\n')
+    print(f'{UNDER + BOLD + PINK}USAGE{CLEAR}')
+    print(f'{GREEN}./persona5-royal-guide.py{CLEAR} {RED}[args]{CLEAR}')
+    print(f'{RED}OR{CLEAR}')
+    print(f'{GREEN}python persona5-royal-guide.py{CLEAR} {RED}[args]{CLEAR}\n')
+    print(f'{BOLD + UNDER + PINK}ARGUMENTS{CLEAR}')
+    print(f'{BOLD}-h, --help{CLEAR}', '\t\tno extra args\t\t', 'Bring up the help menu')
+    print(f'{BOLD}-v, --verbose{CLEAR}', '\t\tno extra args\t\t', 'Enable verbose output')
+    print(f'{BOLD}-a, --answers{CLEAR}','\t\tno extra args\t\t', 'Get answers for in-game questions asked during class and exams')
+    print(f'{BOLD}-c, --confidants{CLEAR}', f'\t{RED}one required arg{CLEAR}\t', 'Get info about the confidants')
 
 def confidantHelp():
     """Prints the help menu for the confidant mode"""
-    print('\nConfidant Help Menu\n')
-    print('Currently the only working options are dialog and list\n')
-    print('Usage:')
-    print('./persona5-royal-guide.py -c [dialogue | hangout | list | all] [confidant name/keyword] (optional)')
-    print('Unless you provided the confident as an argument, upon entering confidant mode, you\'ll be prompted to input the name of the chosen confidant')
-    print('Options\n')
-    print('dialogue\t\t', 'Confidant dialogue option to get the best answers for each rank of the chosen confidant')
-    print('hangout\t\t\t', 'Prints the typical hangout spot for the chosen confidant')
-    print('list\t\t\t', 'Prints all the names/keywords of confidants that can be used during confidant selection or passed as an argument to the script')
-    print('all\t\t\t', 'Prints all information (dialogue options and hangout locations) about the chosen confidant')
+    print(f'\n{BOLD + UNDER + BLUE}Confidant Help Menu{CLEAR}\n')
+    print(f'{BOLD + UNDER}Currently the only working options are dialog and list\n')
+    print(f'{UNDER + PINK + BOLD}Usage{CLEAR}:')
+    print(f'{GREEN}./persona5-royal-guide.py{CLEAR} -c {RED}[dialogue | hangout | list | all]{CLEAR} {YELLOW}[confidant name/keyword] (optional){CLEAR}')
+    print(f'\n{BOLD + UNDER}Unless you provided the confident as an argument, upon entering confidant mode, you\'ll be prompted to input the name of the chosen confidant{CLEAR}\n')
+    print(f'{PINK}Options{CLEAR}\n')
+    print(f'{BOLD}dialogue{CLEAR}\t\t', 'Confidant dialogue option to get the best answers for each rank of the chosen confidant')
+    print(f'{BOLD}hangout{CLEAR}\t\t\t', 'Prints the typical hangout spot for the chosen confidant')
+    print(f'{BOLD}list{CLEAR}\t\t\t', 'Prints all the names/keywords of confidants that can be used during confidant selection or passed as an argument to the script')
+    print(f'{BOLD}all{CLEAR}\t\t\t', 'Prints all information (dialogue options and hangout locations) about the chosen confidant')
     p5rConfidantGuide.listConfidants()
 
 def main():
@@ -82,7 +92,7 @@ def main():
                 ansFlag = True
             elif opt in ('-c', '--confidants'):
                 confidantFlag = True
-                if arg == None:
+                if arg == None or arg == '':
                     confidantHelp()
                     exit(1)
                 confidantArg = arg
