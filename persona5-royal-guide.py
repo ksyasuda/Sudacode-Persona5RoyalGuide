@@ -4,6 +4,7 @@ import sys
 import getopt
 from ClassroomAnswers import p5rClassroomQuestions
 from ConfidantGuides import p5rConfidantGuide
+from Activities import p5rActivities
 from colors import colors
 
 CLEAR = colors.bcolors.ENDC
@@ -61,10 +62,11 @@ def main():
     provided_confidant = ''
     conf_given = False
     try:
-        options, remainder = getopt.gnu_getopt(argv[1:], 'vhac:', ['help=',
+        options, remainder = getopt.gnu_getopt(argv[1:], 'vhac:d', ['help=',
                                                                'answers=',
                                                                'verbose=',
-                                                               'confidants='])
+                                                               'confidants=',
+                                                               'daily='])
     except getopt.GetoptError:
         for i in range(len(argv)):
             ## go through each argument and check for a 'c' or 'confidant' since
@@ -80,6 +82,7 @@ def main():
     helpFlag = False
     ansFlag  = False
     confidantFlag = False
+    activitiesFlag = False
     confidantArg = ''
     if len(options) > 0:
         ## need to run through first time to check if verbose flag is set
@@ -99,6 +102,8 @@ def main():
                 if p5rConfidantGuide.isConfidant(argv[argc-1]):
                     conf_given = True
                     provided_confidant = argv[argc-1]
+            elif opt in ('-d', '--daily'):
+                activitiesFlag = True
 
     else:
         printHelp()
@@ -136,7 +141,10 @@ def main():
         else:
             print('options are: "dialogue", "hangout", "list", and "all"')
             # printAllConfidantInfo()
-            pass
+    elif activitiesFlag:
+        p5rActivities.getActivities()
+        # p5rActivities.getDay()
+        
 
 if __name__ == '__main__':
     main()

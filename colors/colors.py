@@ -17,3 +17,14 @@ color_map = {
     'Kindness': bcolors.OKCYAN,
     'Courage': bcolors.OKGREEN
 }
+
+color_mapper = {
+    'red': bcolors.FAIL,
+    'pink': bcolors.HEADER,
+    'yellow': bcolors.WARNING,
+    'blue': bcolors.OKBLUE,
+    'bold': bcolors.BOLD,
+    'underline': bcolors.UNDERLINE,
+    'green': bcolors.OKGREEN,
+    'end': bcolors.ENDC
+}
