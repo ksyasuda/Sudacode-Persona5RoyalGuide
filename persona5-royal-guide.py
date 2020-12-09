@@ -27,7 +27,7 @@ def getConfidant(isVerbose):
 
 def printHelp():
     """Prints the help menu for the script"""
-    print(f'\n{BOLD + UNDER + BLUE}Sudacode{CLEAR} {RED}Persona 5 Royal{CLEAR} {PINK}Guide{CLEAR}\n')
+    print(f'\n{BOLD + RED}Sudacode Persona 5 Royal Guide{CLEAR}\n')
     print(f'{UNDER}Words of Advice{CLEAR}:')
     print(f'{BOLD}When In Doubt, Factor Out - Mr. Kim{CLEAR}\n')
     print(f'{UNDER + BOLD + PINK}USAGE{CLEAR}')
@@ -39,6 +39,7 @@ def printHelp():
     print(f'{BOLD}-v, --verbose{CLEAR}', '\t\tno extra args\t\t', 'Enable verbose output')
     print(f'{BOLD}-a, --answers{CLEAR}','\t\tno extra args\t\t', 'Get answers for in-game questions asked during class and exams')
     print(f'{BOLD}-c, --confidants{CLEAR}', f'\t{RED}one required arg{CLEAR}\t', 'Get info about the confidants')
+    print(f'{BOLD}-d, --daily{CLEAR}', '\t\tno extra args\t\t', 'Get a list of daily activities/events')
 
 def confidantHelp():
     """Prints the help menu for the confidant mode"""
