@@ -1,4 +1,4 @@
-from colors.colors import color_mapper
+from colors.colors import color_mapper, putColor
 import os
 
 def getActivities():
@@ -10,7 +10,14 @@ def getActivities():
         for line in lines:
             parts = line.split(' ')
             if len(parts) == 1 or parts[0] in ('Rainy', 'Seasonal'):
-                temp = color_mapper['bold'] + color_mapper['underline']
-                temp += line + color_mapper['end'] 
-                line = temp
+                line = putColor(line, color_mapper['bold'] + color_mapper['underline'])
+            elif '円' in line:
+                ## if the last part has the yen kanji
+                part = parts[-1]
+                parts[-1] = putColor(part, color_mapper['red'])
+                line = ' '.join(parts[:])
+            if '(Afternoon)' in line:
+                part = parts[-1]
+                parts[-1] = putColor(part, color_mapper['yellow'])
+                line = ' '.join(parts[:])
             print(line)

@@ -28,3 +28,7 @@ color_mapper = {
     'green': bcolors.OKGREEN,
     'end': bcolors.ENDC
 }
+
+def putColor(line, before):
+    """Returns the passed in line with color"""
+    return str(before) + str(line) + bcolors.ENDC 
