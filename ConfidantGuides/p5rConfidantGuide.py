@@ -153,6 +153,32 @@ def cleanupLine(bestAnswer, isVerbose):
         bestAnswer[len(bestAnswer) - 2] += bestAnswer[len(bestAnswer) - 1]
         bestAnswer.pop()
 
+def findRomanceAnswer(parts, isVerbose):
+    end_idx = parts.index('END') if 'END' in parts else None
+    rom_idx = parts.index('(ROMANCE)') 
+    if end_idx != None and end_idx < rom_idx:
+        return ' '.join(parts[end_idx+1:rom_idx+1])
+    elif end_idx != None and rom_idx < end_idx:
+        return ' '.join(parts[rom_idx+1:end_idx+1])
+    elif end_idx == None:
+        idx = -1
+        counter = 0
+        if parts[-2] == '(ROMANCE)':
+            for part in parts:
+                if part[0] == '+':
+                    idx = counter
+                    break
+                counter += 1
+            return ' '.join(parts[idx + 1:len(parts) - 1])
+        else:
+            for part in parts:
+                if part[0] == '+':
+                    # start at one becuase there is Response x before the actual
+                    # response
+                    # counter + 2 because counter is still 1 behind here
+                    return ' '.join(parts[1:counter + 2])
+                counter += 1
+
 
 def findBestAnswer(parts, isVerbose):
     """Parses the parts vector for the best answer for each dialogue option"""
@@ -171,7 +197,7 @@ def findBestAnswer(parts, isVerbose):
     # Akechi level 9
     if len(scores) == 0 and parts[0] == 'Story':
         return (f'{bcolors.BOLD}' + ' '.join(parts[0:])) + f'{bcolors.ENDC}'
-
+    
     maxVal = -99999 ## initialize to low val
     index = 0 ## idx of highest value answer
     count = 0
@@ -223,6 +249,7 @@ def printDialogueAnswers(confidant, isVerbose):
     filepath = get_path_to_file(confidant, isVerbose)
     if isVerbose:
         print('Path =', filepath)
+    ranknine = False
     with open(filepath) as f:
         if isVerbose:
             print(filepath, 'opened')
@@ -243,6 +270,7 @@ def printDialogueAnswers(confidant, isVerbose):
                 parts[1] = temp
                 temp += f'{bcolors.ENDC}'
                 print(parts[0], parts[1])
+                continue
             elif parts[0] == 'Level' or parts[0] == 'MAX':
                 ## make entire Level # X required bold
                 temp = f'{bcolors.BOLD}'
@@ -259,12 +287,19 @@ def printDialogueAnswers(confidant, isVerbose):
                 temp += f'{bcolors.ENDC}'
                 print(temp)
                 continue
-            elif parts[0] == '(ROMANCE)':
+            elif parts[0] == '(ROMANCE)' and len(parts) > 1:
                 temp = f'{bcolors.WARNING}'
                 temp += parts[0]
                 temp += f'{bcolors.ENDC}'
                 print(temp)
                 continue
+            if '(ROMANCE)' in parts: 
+                best = findRomanceAnswer(parts, isVerbose)
+                temp = best.split(' ')
+                last = bcolors.FAIL + temp[-1] + bcolors.ENDC
+                temp[-1] = last
+                best = ' '.join(temp[:])
+                print(f'{bcolors.ENDC}Answer:', best)
             else:
                 if isVerbose:
                     print(f'{bcolors.ENDC}finding best answer...')
