@@ -133,10 +133,15 @@ def main():
                 provided_confidant = p5rConfidantGuide.normalizeName(provided_confidant)
                 p5rConfidantGuide.printDialogueAnswers(provided_confidant, isVerbose)
             pass
-        elif arg == 'gift' or arg == 'g':
+        elif arg == 'gifts' or arg == 'g':
             if not conf_given:
                 confidant = getConfidant(isVerbose)
-            gift = p5rConfidantGuide.getBestGift(confidant, isVerbose)
+                gifts = p5rConfidantGuide.getBestGift(confidant, isVerbose)
+            else:
+                provided_confidant = p5rConfidantGuide.normalizeName(provided_confidant)
+                gifts = p5rConfidantGuide.getBestGift(provided_confidant, isVerbose)
+            for gift in gifts:
+                print(gift)
         elif arg == 'hangout' or arg == 'h':
             confidant = getConfidant(isVerbose)
             # printHangoutLocation(confidant)
@@ -144,7 +149,7 @@ def main():
         elif arg == 'list' or arg == 'l':
             p5rConfidantGuide.listConfidants()
         else:
-            print('options are: "dialogue", "hangout", "list", and "all"')
+            print('options are: "dialogue", "gifts", "hangout", "list", and "all"')
             # printAllConfidantInfo()
     elif activitiesFlag:
         p5rActivities.getActivities()
