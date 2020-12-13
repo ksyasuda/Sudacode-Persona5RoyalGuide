@@ -133,6 +133,10 @@ def main():
                 provided_confidant = p5rConfidantGuide.normalizeName(provided_confidant)
                 p5rConfidantGuide.printDialogueAnswers(provided_confidant, isVerbose)
             pass
+        elif arg == 'gift' or arg == 'g':
+            if not conf_given:
+                confidant = getConfidant(isVerbose)
+            gift = p5rConfidantGuide.getBestGift(confidant, isVerbose)
         elif arg == 'hangout' or arg == 'h':
             confidant = getConfidant(isVerbose)
             # printHangoutLocation(confidant)

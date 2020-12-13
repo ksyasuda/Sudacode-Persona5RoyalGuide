@@ -71,6 +71,9 @@ def get_path_to_file(confidant, isVerbose):
     if isVerbose:
         print('Path after strip =', filepath)
 
+    return filepath
+
+def getPathToDialogue(filepath, confidant, isVerbose):
     filepath += '/dialogues'
     if confidant == 'Sadayo Kawakami':
         filepath += '/KawakamiRomance.txt'
@@ -247,6 +250,7 @@ def printDialogueAnswers(confidant, isVerbose):
     if isVerbose:
         print('Getting path to dialogue file for', confidant)
     filepath = get_path_to_file(confidant, isVerbose)
+    filepath = getPathToDialogue(filepath, confidant, isVerbose)
     if isVerbose:
         print('Path =', filepath)
     ranknine = False
@@ -307,3 +311,10 @@ def printDialogueAnswers(confidant, isVerbose):
                 if isVerbose:
                     print(f'{bcolors.ENDC}best answer found...')
                 print(f'{bcolors.ENDC}Answer:', best)
+
+## ----------------------------------------------------------------------------
+## Gift guide
+
+def getBestGift(confidant, isVerbose):
+    filepath = 
+    with open()
