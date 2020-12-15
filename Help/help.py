@@ -35,7 +35,7 @@ def confidantHelp():
     print(f'\n{BOLD + UNDER}Unless you provided the confident as an argument, upon entering confidant mode, you\'ll be prompted to input the name of the chosen confidant{CLEAR}\n')
     print(f'{PINK}Options{CLEAR}\n')
     print(f'{BOLD}dialogue{CLEAR}\t\t', 'Confidant dialogue option to get the best answers for each rank of the chosen confidant')
-    print(f'{BOLD}gifts{CLEAR}\t\t', 'Prints the list of best gifts for the given confidant')
+    print(f'{BOLD}gifts{CLEAR}\t\t\t', 'Prints the list of best gifts for the given confidant')
     print(f'{BOLD}hangout{CLEAR}\t\t\t', 'Prints the typical hangout spot for the chosen confidant')
     print(f'{BOLD}list{CLEAR}\t\t\t', 'Prints all the names/keywords of confidants that can be used during confidant selection or passed as an argument to the script')
     print(f'{BOLD}all{CLEAR}\t\t\t', 'Prints all information (dialogue options and hangout locations) about the chosen confidant')
