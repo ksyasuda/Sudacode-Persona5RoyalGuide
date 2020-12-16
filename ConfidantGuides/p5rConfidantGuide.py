@@ -160,9 +160,9 @@ def findRomanceAnswer(parts, isVerbose):
     end_idx = parts.index('END') if 'END' in parts else None
     rom_idx = parts.index('(ROMANCE)') 
     if end_idx != None and end_idx < rom_idx:
-        return ' '.join(parts[end_idx+1:rom_idx+1])
+        return ' '.join(parts[end_idx + 1:rom_idx + 1])
     elif end_idx != None and rom_idx < end_idx:
-        return ' '.join(parts[rom_idx+1:end_idx+1])
+        return ' '.join(parts[2:rom_idx + 1])
     elif end_idx == None:
         idx = -1
         counter = 0
