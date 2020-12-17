@@ -58,7 +58,7 @@ def isConfidant(name):
 
 def normalizeName(name):
     """Gets the name of the confidant used in the program from the name/keyword inputted by the user"""
-    return mapper[name.strip().upper()]
+    return mapper[name.strip().upper()] if name.strip().upper() in mapper else None
 
 def get_path_to_file(confidant, isVerbose):
     """Returns the path to the dialogue file for [confidant]"""
@@ -373,22 +373,26 @@ def getBestGift(confidant, isVerbose):
     """Returns the list of best gifts for the given confidant"""
     filepath = get_path_to_file(confidant, isVerbose) 
     filepath = getPathToGift(filepath, confidant, isVerbose)
-    with open(filepath) as f:
-        lines = f.readlines()
-        count = 0
-        for line in lines:
-            parts = line.split(' ')
-            score_idx = getScoreIdx(parts, isVerbose)
-            putColor(parts, score_idx, bcolors.OKGREEN)
-            tup = checkP5R(parts)
-            if tup != -1:
-                putColors(parts, tup[0], tup[1] + 1, bcolors.FAIL)
-            lines[count] = ' '.join(parts[:])
-            temp = checkSpecialChars(line, '*', bcolors.WARNING, isVerbose)
-            if temp != -1:
-                lines[count] = temp
-            temp = checkSpecialChars(lines[count], '^', bcolors.HEADER, isVerbose)
-            if temp != -1:
-                lines[count] = temp
-            count += 1
-        return lines
+    try:
+        with open(filepath) as f:
+            lines = f.readlines()
+            count = 0
+            for line in lines:
+                parts = line.split(' ')
+                score_idx = getScoreIdx(parts, isVerbose)
+                putColor(parts, score_idx, bcolors.OKGREEN)
+                tup = checkP5R(parts)
+                if tup != -1:
+                    putColors(parts, tup[0], tup[1] + 1, bcolors.FAIL)
+                lines[count] = ' '.join(parts[:])
+                temp = checkSpecialChars(line, '*', bcolors.WARNING, isVerbose)
+                if temp != -1:
+                    lines[count] = temp
+                temp = checkSpecialChars(lines[count], '^', bcolors.HEADER, isVerbose)
+                if temp != -1:
+                    lines[count] = temp
+                count += 1
+            return lines
+    except IsADirectoryError:
+        print(f'Support for {confidant} has not been added yet')
+        exit(1)
