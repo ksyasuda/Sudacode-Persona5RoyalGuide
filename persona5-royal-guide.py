@@ -107,10 +107,11 @@ def main():
         elif arg == 'dialogue' or arg == 'd':
             if not conf_given:
                 confidant = getConfidant(isVerbose)
-                p5rConfidantGuide.printDialogueAnswers(confidant, isVerbose)
+                # p5rConfidantGuide.printDialogueAnswers(confidant, isVerbose)
+                printDialogue(provided_confidant, isVerbose)
             else:
                 provided_confidant = getName(provided_confidant)
-                printDialogue(provided_confidant)
+                printDialogue(provided_confidant, isVerbose)
         elif arg == 'gifts' or arg == 'g':
             if not conf_given:
                 confidant = getConfidant(isVerbose)
