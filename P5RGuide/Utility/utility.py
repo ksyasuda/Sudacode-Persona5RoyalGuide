@@ -1,11 +1,11 @@
 import sys
 import getopt
-from P5RGuide.ConfidantGuides.p5rConfidantGuide import chooseConfidant
-from P5RGuide.ConfidantGuides.p5rConfidantGuide import isConfidant
-from P5RGuide.ConfidantGuides.p5rConfidantGuide import normalizeName
-from P5RGuide.ConfidantGuides.p5rConfidantGuide import listConfidants 
-from P5RGuide.ConfidantGuides.p5rConfidantGuide import printDialogueAnswers
-from P5RGuide.ConfidantGuides.p5rConfidantGuide import getBestGift
+from P5RGuide.ConfidantGuides.DialogueGuide import chooseConfidant
+from P5RGuide.ConfidantGuides.DialogueGuide import isConfidant
+from P5RGuide.ConfidantGuides.DialogueGuide import normalizeName
+from P5RGuide.ConfidantGuides.DialogueGuide import listConfidants 
+from P5RGuide.ConfidantGuides.DialogueGuide import printDialogueAnswers
+from P5RGuide.ConfidantGuides.GiftGuide import getBestGift
 from P5RGuide.ClassroomAnswers.p5rClassroomQuestions import readQuestions
 from P5RGuide.ClassroomAnswers.p5rClassroomQuestions import getInput   
 from P5RGuide.ClassroomAnswers.p5rClassroomQuestions import printData   

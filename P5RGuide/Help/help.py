@@ -1,5 +1,5 @@
 from P5RGuide.colors import colors
-from P5RGuide.ConfidantGuides.p5rConfidantGuide import listConfidants
+from P5RGuide.ConfidantGuides.DialogueGuide import listConfidants
 
 CLEAR = colors.bcolors.ENDC
 RED = colors.bcolors.FAIL

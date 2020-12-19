@@ -49,7 +49,6 @@ Response 4 I love you. +2 (ROMANCE) What do you think? +0 END
 Response 5 It isn’t a joke. +3 (ROMANCE) That sounds good. +0 
 Followup It’s true love. +0 So did you. +2 I’ve always loved you. +0
 Rank MAX
-(ROMANCE)
 Response 1 Uh, what? +0 Is that a joke? +0 
 Response 2 It’s a coincidence. +0 I wonder… +2 So what if it’s true? +0
 Response 3 What kind? +2 Yes, please. +3 

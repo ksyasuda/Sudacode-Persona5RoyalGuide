@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import os
 import re
 
@@ -175,66 +173,70 @@ def findRomanceAnswer(parts, isVerbose):
     else:
         return line[end_idx.end():rom_idx.end()].strip()
 
+def check_scores(scores, isVerbose):
+    """
+    Checks the array of scores to see if all of the values are the same
+    """
+    all_same = True
+    if isVerbose:
+        print('SCORES', scores)
+    for i in range(len(scores)):
+        if i == 0:
+            continue
+        if scores[i-1] != scores[i]:
+            all_same = False
+    return all_same
+
+
 def findBestAnswer(parts, isVerbose):
     """Parses the parts vector for the best answer for each dialogue option"""
+    line = ' '.join(parts[:])
+    # Shouldn't happen but want to know if it does
+    if len(line) == 0:
+        print('BLANK LINE')
+        exit(1)
+    pattern = re.compile(r'\+\d')
+    matches = pattern.finditer(line)
+    match_objs = []
     scores = []
-    indicies = []
+    highest_score = -1
     count = 0
-    if isVerbose:
-        print('parsing line', ' '.join(parts[0:]))
-    for part in parts:
-        ## If a + is there a single digit follows guaranteed
-        if part[0] == '+':
-            scores.append(part[1])
-            indicies.append(count)
+    for match in matches:
+        # each group is '+SCORE'
+        score = int(match.group()[1])
+        if isVerbose:
+            print('SCORE', score)
+        scores.append(score)
+        match_objs.append(match)
+        if score > highest_score:
+            highest_score = count
         count += 1
 
     # Akechi level 9
-    if len(scores) == 0 and parts[0] == 'Story':
+    if len(scores) == 0: 
         return (f'{bcolors.BOLD}' + ' '.join(parts[0:])) + f'{bcolors.ENDC}'
-    
-    maxVal = -99999 ## initialize to low val
-    index = 0 ## idx of highest value answer
-    count = 0
-    allSame = True
+
+    all_same = check_scores(scores, isVerbose)
+    if all_same:
+        return 'Pick any answer'
+
     if isVerbose:
-        print('line parsed... finding index of best option')
-    ## indicies will only be size 1 when all same value
-    for score in scores:
-        if int(score) > int(maxVal):
-            maxVal = int(score)
-            index = count
-        if count > 0 and scores[count] != scores[count - 1]:
-            if isVerbose:
-                print('All scores NOT the same')
-            allSame = False
-        count += 1
-
-    ## If all the options have the same score
-    if allSame:
-        if isVerbose:
-            print('All scores same')
-        return 'Pick Any'
-
-    bestAnswer = ''
-    if index == 0: 
-        ## if best option is the left most option
-        bestAnswer = parts[:indicies[index]+1]
-    else:
-        idx = indicies[index-1]
-        if index != len(parts) - 1:
-            idx += 1
-        beginIndex = idx
-        endIndex = indicies[index]
-        bestAnswer = parts[beginIndex:endIndex]
-        bestAnswer += parts[endIndex]
-        ## shouldn't need this anymore
-
-    cleanupLine(bestAnswer, isVerbose)
-    ## best answer = an array containing each word in the answer
-    bestAnswer = ' '.join(bestAnswer)
-    after_plus = bestAnswer[bestAnswer.find('+') + 1]
-    return bestAnswer
+        print('HIGHEST SCORE INDEX', highest_score)
+    if highest_score == 0:
+        first_word = line[:line.find(' ')]
+        # 'Response X '
+        if first_word == 'Response':
+            return (line[10:match_objs[0].end()]).strip()
+        # 'Followup '
+        elif first_word == 'Followup':
+            return (line[9:match_objs[0].end()]).strip()
+    elif highest_score == 1:
+        begin = int(match_objs[0].end()) + 1
+        end = int(match_objs[1].end())
+        return (line[begin:end]).strip()
+    elif highest_score == 2:
+        return (line[int(match_objs[1].end()) + 1:]).strip()
+    return 'Pick any answer'
 
 def printDialogueAnswers(confidant, isVerbose):
     """Prints the best (or first if there is a tie) answers for dialogue with the chosen confidant"""
@@ -246,145 +248,65 @@ def printDialogueAnswers(confidant, isVerbose):
     if isVerbose:
         print('Path =', filepath)
     ranknine = False
-    with open(filepath) as f:
-        if isVerbose:
-            print(filepath, 'opened')
-        lines = f.readlines()
-        first = 0
-        for line in lines:
-            ## get rid of unwanted blank lines
-            if len(line) == 0 or line == '\n':
-                continue
-            parts = line.split(' ')
-            if parts[0] == 'Rank':
-                ## make the Rank # bold
-                temp = f'\n{bcolors.BOLD}'
-                temp += parts[0]
-                parts[0] = temp
-                temp = f'{bcolors.BOLD}'
-                temp += parts[1]
-                parts[1] = temp
-                temp += f'{bcolors.ENDC}'
-                print(parts[0], parts[1])
-                continue
-            elif parts[0] == 'Level' or parts[0] == 'MAX':
-                ## make entire Level # X required bold
-                temp = f'{bcolors.BOLD}'
-                attribute = ''
-                if parts[0] == 'Level':
-                    ## Level # [attribute] Required
-                    attribute = parts[2]
-                elif parts[0] == 'MAX':
-                    ## MAX X Required
-                    attribute = parts[1]
-                temp += color_map[attribute]
-                for i in range(len(parts)):
-                    temp += ' ' + parts[i]
-                temp += f'{bcolors.ENDC}'
-                print(temp)
-                continue
-            elif parts[0] == '(ROMANCE)' and len(parts) > 1:
-                temp = f'{bcolors.WARNING}'
-                temp += parts[0]
-                temp += f'{bcolors.ENDC}'
-                print(temp)
-                continue
-            if '(ROMANCE)' in parts: 
-                best = findRomanceAnswer(parts, isVerbose)
-                temp = best.split(' ')
-                last = bcolors.FAIL + temp[-1] + bcolors.ENDC
-                temp[-1] = last
-                best = ' '.join(temp[:])
-                print(f'{bcolors.ENDC}Answer:', best)
-            else:
-                if isVerbose:
-                    print(f'{bcolors.ENDC}finding best answer...')
-                best = findBestAnswer(parts, isVerbose)
-                if isVerbose:
-                    print(f'{bcolors.ENDC}best answer found...')
-                print(f'{bcolors.ENDC}Answer:', best)
-
-## ----------------------------------------------------------------------------
-## Gift guide
-
-def getPathToGift(filepath, confidant, isVerbose):
-    """Returns the filepath to the best gifts for the given confidant"""
-    filepath += '/Gifts'
-    if confidant == 'Ann Takamaki':
-        filepath += '/AnnGifts.txt'
-    return filepath
-
-def getScoreIdx(parts, isVerbose):
-    """Returns the index of the first +x where x is the score"""
-    count = 0
-    for part in parts:
-        if part[0] == '+':
-            return count
-        count += 1
-    return None 
-
-def putColor(parts, idx, colors):
-    """colors the output at index idx"""
-    part = parts[idx]
-    temp = colors + part + bcolors.ENDC
-    parts[idx] = temp
-
-def putColors(parts, begin, end, colors):
-    """Puts the colors between begin and end"""
-    while begin < end:
-        part = parts[begin]
-        temp = colors + part + bcolors.ENDC
-        parts[begin] = temp
-        begin += 1
-
-def checkP5R(parts):
-    """Checks for the P5R string in the message"""
-    idx = 0
-    begin = end = 999
-    if '(P5R' in parts or 'P5R)' in parts:
-        for part in parts:
-            if part[0] == '(':
-                begin = idx
-            if part[-1] == ')':
-                end = idx
-            idx += 1
-        if begin == 999 or end == 999:
-            return -1
-        return (begin, end)
-    return -1
-
-def checkSpecialChars(line, s_char, color, isVerbose):
-    if s_char in line:
-        parts = line.split(s_char)
-        temp = color + s_char + bcolors.ENDC
-        return temp.join(parts[:]) 
-    return -1
-                
-
-def getBestGift(confidant, isVerbose):
-    """Returns the list of best gifts for the given confidant"""
-    filepath = get_path_to_file(confidant, isVerbose) 
-    filepath = getPathToGift(filepath, confidant, isVerbose)
     try:
         with open(filepath) as f:
+            if isVerbose:
+                print(filepath, 'opened')
             lines = f.readlines()
-            count = 0
+            first = 0
             for line in lines:
+                ## get rid of unwanted blank lines
+                if len(line) == 0 or line == '\n':
+                    continue
                 parts = line.split(' ')
-                score_idx = getScoreIdx(parts, isVerbose)
-                putColor(parts, score_idx, bcolors.OKGREEN)
-                tup = checkP5R(parts)
-                if tup != -1:
-                    putColors(parts, tup[0], tup[1] + 1, bcolors.FAIL)
-                lines[count] = ' '.join(parts[:])
-                temp = checkSpecialChars(line, '*', bcolors.WARNING, isVerbose)
-                if temp != -1:
-                    lines[count] = temp
-                temp = checkSpecialChars(lines[count], '^', bcolors.HEADER, isVerbose)
-                if temp != -1:
-                    lines[count] = temp
-                count += 1
-            return lines
+                if parts[0] == 'Rank':
+                    ## make the Rank # bold
+                    temp = f'\n{bcolors.BOLD}'
+                    temp += parts[0]
+                    parts[0] = temp
+                    temp = f'{bcolors.BOLD}'
+                    temp += parts[1]
+                    parts[1] = temp
+                    temp += f'{bcolors.ENDC}'
+                    print(parts[0], parts[1])
+                    continue
+                elif parts[0] == 'Level' or parts[0] == 'MAX':
+                    ## make entire Level # X required bold
+                    temp = f'{bcolors.BOLD}'
+                    attribute = ''
+                    if parts[0] == 'Level':
+                        ## Level # [attribute] Required
+                        attribute = parts[2]
+                    elif parts[0] == 'MAX':
+                        ## MAX X Required
+                        attribute = parts[1]
+                    temp += color_map[attribute]
+                    for i in range(len(parts)):
+                        temp += ' ' + parts[i]
+                    temp += f'{bcolors.ENDC}'
+                    print(temp)
+                    continue
+                elif parts[0] == '(ROMANCE)' and len(parts) > 1:
+                    temp = f'{bcolors.WARNING}'
+                    temp += parts[0]
+                    temp += f'{bcolors.ENDC}'
+                    print(temp)
+                    continue
+                if '(ROMANCE)' in parts: 
+                    best = findRomanceAnswer(parts, isVerbose)
+                    temp = best.split(' ')
+                    last = bcolors.FAIL + temp[-1] + bcolors.ENDC
+                    temp[-1] = last
+                    best = ' '.join(temp[:])
+                    print(f'{bcolors.ENDC}Answer:', best)
+                else:
+                    if isVerbose:
+                        print(f'{bcolors.ENDC}finding best answer...')
+                    best = findBestAnswer(parts, isVerbose)
+                    if isVerbose:
+                        print(f'{bcolors.ENDC}best answer found...')
+                    print(f'{bcolors.ENDC}Answer:', best)
     except IsADirectoryError:
         print(f'Support for {confidant} has not been added yet')
         exit(1)
+
