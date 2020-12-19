@@ -1,9 +1,10 @@
 env/
 .git
 .vscode
-__pycache__/*
+P5RGuide/__pycache__/
 P5RGuide/ClassroomAnswers/__pycache__
 P5RGuide/ConfidantGuides/__pycache__
 P5RGuide/colors/__pycache__
 P5RGuide/Activities/__pycache__
 P5RGuide/Help/__pycache__
+P5RGuide/Utility/__pycache__
