@@ -11,7 +11,7 @@ from P5RGuide.ClassroomAnswers.p5rClassroomQuestions import getInput
 from P5RGuide.ClassroomAnswers.p5rClassroomQuestions import printData   
 from P5RGuide.Activities.p5rActivities import getActivities
 from P5RGuide.Help.help import printHelp
-from P5RGuide.Help.help import printHelp
+from P5RGuide.Help.help import confidantHelp
 
 
 def getConfidant(isVerbose):
@@ -46,7 +46,7 @@ def get_opts():
                 command = ' '.join(argv[0:])
                 print('Invalid number of arguments in command', command)
                 print('Confidant mode requires additional input...')
-                help.confidantHelp()
+                confidantHelp()
                 exit(1)
         print('Invalid number of arguments in command', ' '.join(argv[0:]))
         exit(1)
@@ -106,20 +106,19 @@ def handle_options(options, remainder, argc, argv):
         printDialogue = printDialogueAnswers
         getGifts = getBestGift
         if arg == 'all' or arg == 'a':
-            confidant = utility.getConfidant(isVerbose)
-            # printAllConfidantInfo()
-            pass
+            print('Not actually implemented yet')
+            exit(1)
+            confidant = getConfidant(isVerbose)
         elif arg == 'dialogue' or arg == 'd':
             if not conf_given:
                 confidant = getConfidant(isVerbose)
-                # p5rConfidantGuide.printDialogueAnswers(confidant, isVerbose)
                 printDialogue(confidant, isVerbose)
             else:
                 provided_confidant = getName(provided_confidant)
                 printDialogue(provided_confidant, isVerbose)
         elif arg == 'gifts' or arg == 'g':
             if not conf_given:
-                confidant = utility.getConfidant(isVerbose)
+                confidant = getConfidant(isVerbose)
                 gifts = getGifts(confidant, isVerbose)
             else:
                 provided_confidant = getName(provided_confidant)
@@ -131,8 +130,5 @@ def handle_options(options, remainder, argc, argv):
         else:
             options = '"dialogue", "gifts", "list", and "all"'
             print('options are: {}'.format(options))
-            # printAllConfidantInfo()
     elif activitiesFlag:
         getActivities()
-        # p5rActivities.getDay()
-

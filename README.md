@@ -57,7 +57,7 @@ Then the script can be executing by using the command `$ persona5-royal-guide`
 	-v, --verbose			Toggle verbose output
 	-a, --answers			Get answers to class/exam questions
 	-c, --confidants		Get information/dialogue answers for the chosen confidant
-	-d, --daily				Get info about the possible daily activite/special events
+	-d, --daily			Get info about the possible daily activite/special events
 
 	Extra Arg(s) Required:
 
