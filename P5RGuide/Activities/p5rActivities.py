@@ -1,4 +1,4 @@
-from colors.colors import color_mapper, putColor
+from P5RGuide.colors.colors import color_mapper, putColor
 import os
 
 def getActivities():

@@ -2,11 +2,11 @@
 
 import sys
 import getopt
-from ClassroomAnswers import p5rClassroomQuestions
-from ConfidantGuides import p5rConfidantGuide
-from Activities import p5rActivities
-from colors import colors
-from Help import help
+from P5RGuide.ClassroomAnswers import p5rClassroomQuestions
+from P5RGuide.ConfidantGuides import p5rConfidantGuide
+from P5RGuide.Activities import p5rActivities
+from P5RGuide.colors import colors
+from P5RGuide.Help import help
 
 CLEAR = colors.bcolors.ENDC
 RED = colors.bcolors.FAIL
@@ -108,7 +108,7 @@ def main():
             if not conf_given:
                 confidant = getConfidant(isVerbose)
                 # p5rConfidantGuide.printDialogueAnswers(confidant, isVerbose)
-                printDialogue(provided_confidant, isVerbose)
+                printDialogue(confidant, isVerbose)
             else:
                 provided_confidant = getName(provided_confidant)
                 printDialogue(provided_confidant, isVerbose)
@@ -121,14 +121,10 @@ def main():
                 gifts = getGifts(provided_confidant, isVerbose)
             for gift in gifts:
                 print(gift)
-        elif arg == 'hangout' or arg == 'h':
-            confidant = getConfidant(isVerbose)
-            # printHangoutLocation(confidant)
-            pass
         elif arg == 'list' or arg == 'l':
             p5rConfidantGuide.listConfidants()
         else:
-            options = '"dialogue", "gifts", "hangout", "list", and "all"'
+            options = '"dialogue", "gifts", "list", and "all"'
             print('options are: {}'.format(options))
             # printAllConfidantInfo()
     elif activitiesFlag:
