@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import os
+import re
 
 class bcolors:
     HEADER = '\033[95m'
@@ -157,31 +158,22 @@ def cleanupLine(bestAnswer, isVerbose):
         bestAnswer.pop()
 
 def findRomanceAnswer(parts, isVerbose):
-    end_idx = parts.index('END') if 'END' in parts else None
-    rom_idx = parts.index('(ROMANCE)') 
-    if end_idx != None and end_idx < rom_idx:
-        return ' '.join(parts[end_idx + 1:rom_idx + 1])
-    elif end_idx != None and rom_idx < end_idx:
-        return ' '.join(parts[2:rom_idx + 1])
-    elif end_idx == None:
-        idx = -1
-        counter = 0
+    line = ' '.join(parts[:])
+    rom = re.compile(r'\(ROMANCE\)')    
+    rom_idx = rom.search(line)
+    end = re.compile(r'END')
+    end_idx = end.search(line)
+    if not rom_idx is None and end_idx is None:
+        plus = re.compile(r'\+\d\s')
+        plus_idx = plus.search(line)
         if parts[-2] == '(ROMANCE)':
-            for part in parts:
-                if part[0] == '+':
-                    idx = counter
-                    break
-                counter += 1
-            return ' '.join(parts[idx + 1:len(parts) - 1])
+            return line[plus_idx.end():].strip()
         else:
-            for part in parts:
-                if part[0] == '+':
-                    # start at one becuase there is Response x before the actual
-                    # response
-                    # counter + 2 because counter is still 1 behind here
-                    return ' '.join(parts[1:counter + 2])
-                counter += 1
-
+            return line[10:rom_idx.end()].strip()
+    if rom_idx.start() < end_idx.start(): 
+        return line[10:rom_idx.end()].strip()
+    else:
+        return line[end_idx.end():rom_idx.end()].strip()
 
 def findBestAnswer(parts, isVerbose):
     """Parses the parts vector for the best answer for each dialogue option"""

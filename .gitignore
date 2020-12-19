@@ -2,8 +2,8 @@ env/
 .git
 .vscode
 __pycache__/*
-ClassroomAnswers/__pycache__
-ConfidantGuides/__pycache__
-colors/__pycache__
-Activities/__pycache__
-Help/__pycache__
+P5RGuide/ClassroomAnswers/__pycache__
+P5RGuide/ConfidantGuides/__pycache__
+P5RGuide/colors/__pycache__
+P5RGuide/Activities/__pycache__
+P5RGuide/Help/__pycache__
