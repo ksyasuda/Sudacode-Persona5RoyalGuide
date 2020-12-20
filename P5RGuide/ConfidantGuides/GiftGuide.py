@@ -41,19 +41,27 @@ def putColors(parts, begin, end, colors):
 
 def checkP5R(parts):
     """Checks for the P5R string in the message"""
-    idx = 0
-    begin = end = 999
-    if '(P5R' in parts or 'P5R)' in parts:
-        for part in parts:
-            if part[0] == '(':
-                begin = idx
-            if part[-1] == ')':
-                end = idx
-            idx += 1
-        if begin == 999 or end == 999:
-            return -1
-        return (begin, end)
-    return -1
+    line = ' '.join(parts[:])
+    pattern = re.compile(r'\([0-9A-Za-z\+\s]+P5R\)')
+    match = pattern.search(line)
+    if match is not None:
+        # return (match.start(), match.end())
+    else:
+        return -1
+    # idx = 0
+    # begin = end = 999
+    # if '(P5R' in parts or 'P5R)' in parts:
+    #     for part in parts:
+    #         if part[0] == '(':
+    #             begin = idx
+    #         if part[-1] == ')':
+    #             end = idx
+    #         idx += 1
+    #     if begin == 999 or end == 999:
+    #         return -1
+    #     print(begin, end)
+    #     return (begin, end)
+    # return -1
 
 def checkSpecialChars(line, s_char, color, isVerbose):
     """Returns the colored special characters (^*) in the string"""
