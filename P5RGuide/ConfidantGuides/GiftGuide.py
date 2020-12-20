@@ -1,9 +1,11 @@
+import re
 from P5RGuide.ConfidantGuides.DialogueGuide import get_path_to_file
 from P5RGuide.colors.colors import bcolors
 
 AVAILABLE_CONFIDANTS = ['Ann Takamaki']
 
 def printAvailableConfidants():
+    """Prints the list of available confidants for the gifts"""
     for c in AVAILABLE_CONFIDANTS:
         print(c, end='\t')
 
@@ -54,6 +56,7 @@ def checkP5R(parts):
     return -1
 
 def checkSpecialChars(line, s_char, color, isVerbose):
+    """Returns the colored special characters (^*) in the string"""
     if s_char in line:
         parts = line.split(s_char)
         temp = color + s_char + bcolors.ENDC
