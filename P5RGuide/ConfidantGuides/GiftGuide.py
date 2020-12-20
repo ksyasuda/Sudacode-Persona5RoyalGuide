@@ -4,11 +4,13 @@ from P5RGuide.colors.colors import bcolors
 
 AVAILABLE_CONFIDANTS = ['Ann Takamaki', 'Sadayo Kawakami', 'Makoto Nijima']
 
+
 def printAvailableConfidants():
     """Prints the list of available confidants for the gifts"""
     for c in AVAILABLE_CONFIDANTS:
         print(c, end='    ')
     print()
+
 
 def getPathToGift(filepath, confidant, isVerbose):
     """Returns the filepath to the best gifts for the given confidant"""
@@ -21,6 +23,7 @@ def getPathToGift(filepath, confidant, isVerbose):
         filepath += '/MakotoGifts.txt'
     return filepath
 
+
 def getScoreIdx(parts, isVerbose):
     """Returns the index of the first +x where x is the score"""
     count = 0
@@ -28,13 +31,15 @@ def getScoreIdx(parts, isVerbose):
         if part[0] == '+':
             return count
         count += 1
-    return None 
+    return None
+
 
 def putColor(parts, idx, colors):
     """colors the output at index idx"""
     part = parts[idx]
     temp = colors + part + bcolors.ENDC
     parts[idx] = temp
+
 
 def putColors(parts, begin, end, colors):
     """Puts the colors between begin and end"""
@@ -43,6 +48,7 @@ def putColors(parts, begin, end, colors):
         temp = colors + part + bcolors.ENDC
         parts[begin] = temp
         begin += 1
+
 
 def checkP5R(parts):
     """Checks for the P5R string in the message"""
@@ -60,17 +66,19 @@ def checkP5R(parts):
         return (begin, end)
     return -1
 
+
 def checkSpecialChars(line, s_char, color, isVerbose):
     """Returns the colored special characters (^*) in the string"""
     if s_char in line:
         parts = line.split(s_char)
         temp = color + s_char + bcolors.ENDC
-        return temp.join(parts[:]) 
+        return temp.join(parts[:])
     return -1
-                
+
+
 def getBestGift(confidant, isVerbose):
     """Returns the list of best gifts for the given confidant"""
-    filepath = get_path_to_file(confidant, isVerbose) 
+    filepath = get_path_to_file(confidant, isVerbose)
     filepath = getPathToGift(filepath, confidant, isVerbose)
     try:
         with open(filepath) as f:
@@ -87,7 +95,8 @@ def getBestGift(confidant, isVerbose):
                 temp = checkSpecialChars(line, '*', bcolors.WARNING, isVerbose)
                 if temp != -1:
                     lines[count] = temp
-                temp = checkSpecialChars(lines[count], '^', bcolors.HEADER, isVerbose)
+                temp = checkSpecialChars(lines[count], '^',
+                                         bcolors.HEADER, isVerbose)
                 if temp != -1:
                     lines[count] = temp
                 count += 1
