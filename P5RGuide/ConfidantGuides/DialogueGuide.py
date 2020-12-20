@@ -1,6 +1,7 @@
 import os
 import re
 
+
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -12,6 +13,7 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
+
 color_map = {
     'Guts': bcolors.HEADER,
     'Charm': bcolors.FAIL,
@@ -22,7 +24,7 @@ color_map = {
 }
 
 
-## Mapper from first name or last name to full name
+# Mapper from first name or last name to full name
 mapper = {'MAKOTO': 'Makoto Nijima', 'HARU': 'Haru Okumura', 'OKUMURA':
           'Haru Okumura', 'YUSUKE': 'Yusuke Kitagawa', 'KITAGAWA': 'Yusuke\
           Kitagawa', 'SOJIRO': 'Sojiro Sakura', 'ANN': 'Ann Takamaki',
@@ -35,7 +37,7 @@ mapper = {'MAKOTO': 'Makoto Nijima', 'HARU': 'Haru Okumura', 'OKUMURA':
           'Ichiko Ohya', 'OHYA': 'Ichiko Ohya', 'SHINYA': 'Shinya Oda',
           'ODA': 'Shinya Oda', 'MAKOTO NIJIMA': 'Makoto Nijima', 'SAE\
           NIJIMA': 'Sae Nijima', 'HARU OKUMARU': 'Haru Okumaru', 'YUSUKE\
-          KITAKAWA': 'Yusuku Kitagawa', 'SOJIRO SAKURA': 'Sojiro Sakura',\
+          KITAKAWA': 'Yusuku Kitagawa', 'SOJIRO SAKURA': 'Sojiro Sakura',
           'ANN TAKAMAKI': 'Ann Takamaki', 'RYUJI SAKAMOTO': 'Ryuji\
           Sakamoto', 'GORO AKECHI': 'Goro Akechi', 'FUTABA SAKURA': 'Futaba\
           Sakura', 'CHIHAYA MIFUNE': 'Chihaya Mifune', 'IWAI MUNEHISA':
@@ -48,16 +50,34 @@ mapper = {'MAKOTO': 'Makoto Nijima', 'HARU': 'Haru Okumura', 'OKUMURA':
           'TORANOSUKE YOSHIDA': 'Toranosuke Yoshida'}
 
 
-## List of available names for input
-clist = ['KAWAKAMI', 'MORGANA', 'MAKOTO', 'HARU', 'YUSUKE', 'SOJIRO', 'ANN', 'RYUJI', 'GORO', 'FUTABA', 'CHIHAYA', 'TWINS', 'IWAI', 'TAE', 'SADAYO', 'ICHOKO', 'HIFUMI', 'YUUKI', 'TORANOSUKE', 'SAE', 'KASUMI', 'TAKUTO', 'MARUKI', 'TAKUTO MARUKI', 'YOSHIZAWA', 'KASUMI YOSHIZAWA', 'SAE NIJIMA', 'YOSHIDA', 'TORANOSUKE YOSHIDA', 'MISHIMA', 'YUUKI MISHIMA', 'TOGO', 'HIFUMI TOGO', 'SHINYA ODA', 'ODA', 'SHINYA', 'OHYA', 'ICHIKO OHYA', 'TAKEMI', 'TAE TAKEMI', 'MUNEHISA', 'IWAI MUNEHISA', 'MIFUNE', 'CHIHAYA MIFUNE', 'FUTABA SAKURA', 'AKECHI', 'GORO AKECHI', 'SAKAMOTO', 'RYUJI SAKAMOTO', 'TAKAMAKI', 'ANN TAKAMAKI', 'SOJIRO SAKURA', 'KITAGAWA', 'YUSUKE KITAGAWA', 'OKUMURA', 'HARU OKUMURA', 'MAKOTO NIJIMA']
+# List of available names for input
+clist = ['KAWAKAMI', 'MORGANA', 'MAKOTO', 'HARU', 'YUSUKE', 'SOJIRO', 'ANN',
+         'RYUJI', 'GORO', 'FUTABA', 'CHIHAYA', 'TWINS', 'IWAI', 'TAE',
+         'SADAYO', 'ICHOKO', 'HIFUMI', 'YUUKI', 'TORANOSUKE', 'SAE', 'KASUMI',
+         'TAKUTO', 'MARUKI', 'TAKUTO MARUKI', 'YOSHIZAWA', 'KASUMI YOSHIZAWA',
+         'SAE NIJIMA', 'YOSHIDA', 'TORANOSUKE YOSHIDA', 'MISHIMA',
+         'YUUKI MISHIMA', 'TOGO', 'HIFUMI TOGO', 'SHINYA ODA', 'ODA',
+         'SHINYA', 'OHYA', 'ICHIKO OHYA', 'TAKEMI', 'TAE TAKEMI', 'MUNEHISA',
+         'IWAI MUNEHISA', 'MIFUNE', 'CHIHAYA MIFUNE', 'FUTABA SAKURA',
+         'AKECHI', 'GORO AKECHI', 'SAKAMOTO', 'RYUJI SAKAMOTO', 'TAKAMAKI',
+         'ANN TAKAMAKI', 'SOJIRO SAKURA', 'KITAGAWA', 'YUSUKE KITAGAWA',
+         'OKUMURA', 'HARU OKUMURA', 'MAKOTO NIJIMA']
+
 
 def isConfidant(name):
     """Checks whether [name] is a valid confidant"""
     return name.strip().upper() in clist
 
+
 def normalizeName(name):
-    """Gets the name of the confidant used in the program from the name/keyword inputted by the user"""
-    return mapper[name.strip().upper()] if name.strip().upper() in mapper else None
+    """
+    Gets the name of the confidant used in the program from the name/keyword
+    inputted by the user
+    """
+    if name.strip().upper() in mapper:
+        return mapper[name.strip().upper()]
+    return None
+
 
 def get_path_to_file(confidant, isVerbose):
     """Returns the path to the dialogue file for [confidant]"""
@@ -71,6 +91,7 @@ def get_path_to_file(confidant, isVerbose):
         print('Path after strip =', filepath)
 
     return filepath
+
 
 def getPathToDialogue(filepath, confidant, isVerbose):
     filepath += '/dialogues'
@@ -104,10 +125,13 @@ def getPathToDialogue(filepath, confidant, isVerbose):
         print('Full path', filepath)
     return filepath
 
+
 def listConfidants():
-    """Prints the list of available names/keywords that can be used when selecting a confidant"""
+    """
+    Prints the list of available names/keywords that can be used when
+    selecting a confidant
+    """
     clist.sort()
-    print('------------------------------------------------------------------------------------------')
     print('\nList of available confidant keywords:\n')
     i = 0
     for name in clist:
@@ -116,7 +140,7 @@ def listConfidants():
         else:
             print(name, end=' | ')
         i += 1
-    print('\n------------------------------------------------------------------------------------------')
+
 
 def chooseConfidant(isVerbose):
     """Get input from user and return full name of confidant selected"""
@@ -133,45 +157,51 @@ def chooseConfidant(isVerbose):
         print(confidant, 'found in mapper... returning', mapper[temp])
     return mapper[temp]
 
+
 def cleanupLine(bestAnswer, isVerbose):
-    """Cleans up the line by removing and leading 'Response' or 'Followup' strings and remove unwanted spaces"""
-    ## One last check to get rid of the lingering 'Response' or 'Followup' text at beginning of some lines
+    """
+    Cleans up the line by removing and leading 'Response' or 'Followup'
+    strings and remove unwanted spaces
+    """
     if len(bestAnswer) != 0 and bestAnswer[0] == 'Response':
         if isVerbose:
             print('"Response" found in string')
-            print('Popping off first two values of list...') 
+            print('Popping off first two values of list...')
         bestAnswer.pop(0)
         bestAnswer.pop(0)
     elif bestAnswer[0] == 'Followup':
         if isVerbose:
             print('"Followup" found in string')
-            print('Popping off first value of list...') 
+            print('Popping off first value of list...')
         bestAnswer.pop(0)
-    ## Account for instance where + and the value are separate values at end of list
+    # Account for instance where + and value are separate values at end of list
     if bestAnswer[len(bestAnswer) - 2] == '+':
         if isVerbose:
             print('Extra space detected')
-            print('Appending to second to last element and pop off last element of the list')
+            print('Appending to second to last element', end='')
+            print('and pop off last element of the list')
         bestAnswer[len(bestAnswer) - 2] += bestAnswer[len(bestAnswer) - 1]
         bestAnswer.pop()
 
+
 def findRomanceAnswer(parts, isVerbose):
     line = ' '.join(parts[:])
-    rom = re.compile(r'\(ROMANCE\)')    
+    rom = re.compile(r'\(ROMANCE\)')
     rom_idx = rom.search(line)
     end = re.compile(r'END')
     end_idx = end.search(line)
-    if not rom_idx is None and end_idx is None:
+    if rom_idx is not None and end_idx is None:
         plus = re.compile(r'\+\d\s')
         plus_idx = plus.search(line)
         if parts[-2] == '(ROMANCE)':
             return line[plus_idx.end():].strip()
         else:
             return line[10:rom_idx.end()].strip()
-    if rom_idx.start() < end_idx.start(): 
+    if rom_idx.start() < end_idx.start():
         return line[10:rom_idx.end()].strip()
     else:
         return line[end_idx.end():rom_idx.end()].strip()
+
 
 def check_scores(scores, isVerbose):
     """
@@ -213,7 +243,7 @@ def findBestAnswer(parts, isVerbose):
         count += 1
 
     # Akechi level 9
-    if len(scores) == 0: 
+    if len(scores) == 0:
         return (f'{bcolors.BOLD}' + ' '.join(parts[0:])) + f'{bcolors.ENDC}'
 
     all_same = check_scores(scores, isVerbose)
@@ -238,9 +268,14 @@ def findBestAnswer(parts, isVerbose):
         return (line[int(match_objs[1].end()) + 1:]).strip()
     return 'Pick any answer'
 
+
 def printDialogueAnswers(confidant, isVerbose):
-    """Prints the best (or first if there is a tie) answers for dialogue with the chosen confidant"""
-    print(f'{bcolors.UNDERLINE}{bcolors.BOLD}{bcolors.HEADER}Dialog Answers for', confidant + f':{bcolors.ENDC}')
+    """
+    Prints the best (or first if there is a tie) answers for
+    dialogue with the chosen confidant
+    """
+    clrs = '{bcolors.UNDERLINE}{bcolors.BOLD}{bcolors.HEADER}'
+    print(f'{clrs}Dialog Answers for', confidant + f':{bcolors.ENDC}')
     if isVerbose:
         print('Getting path to dialogue file for', confidant)
     filepath = get_path_to_file(confidant, isVerbose)
@@ -255,12 +290,12 @@ def printDialogueAnswers(confidant, isVerbose):
             lines = f.readlines()
             first = 0
             for line in lines:
-                ## get rid of unwanted blank lines
+                # get rid of unwanted blank lines
                 if len(line) == 0 or line == '\n':
                     continue
                 parts = line.split(' ')
                 if parts[0] == 'Rank':
-                    ## make the Rank # bold
+                    # make the Rank # bold
                     temp = f'\n{bcolors.BOLD}'
                     temp += parts[0]
                     parts[0] = temp
@@ -271,14 +306,14 @@ def printDialogueAnswers(confidant, isVerbose):
                     print(parts[0], parts[1])
                     continue
                 elif parts[0] == 'Level' or parts[0] == 'MAX':
-                    ## make entire Level # X required bold
+                    # make entire Level # X required bold
                     temp = f'{bcolors.BOLD}'
                     attribute = ''
                     if parts[0] == 'Level':
-                        ## Level # [attribute] Required
+                        # Level # [attribute] Required
                         attribute = parts[2]
                     elif parts[0] == 'MAX':
-                        ## MAX X Required
+                        # MAX X Required
                         attribute = parts[1]
                     temp += color_map[attribute]
                     for i in range(len(parts)):
@@ -292,7 +327,7 @@ def printDialogueAnswers(confidant, isVerbose):
                     temp += f'{bcolors.ENDC}'
                     print(temp)
                     continue
-                if '(ROMANCE)' in parts: 
+                if '(ROMANCE)' in parts:
                     best = findRomanceAnswer(parts, isVerbose)
                     temp = best.split(' ')
                     last = bcolors.FAIL + temp[-1] + bcolors.ENDC
@@ -309,4 +344,3 @@ def printDialogueAnswers(confidant, isVerbose):
     except IsADirectoryError:
         print(f'Support for {confidant} has not been added yet')
         exit(1)
-
